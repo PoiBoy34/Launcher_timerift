@@ -68,7 +68,12 @@ Object.assign(console, log.functions); // console.log/error → fichier + termin
 const MC_BUFFER_MAX = 400;
 const mcOutputBuffer = [];
 function pushMcLine(line) {
-    const clean = String(line).trimEnd();
+    // Le token Microsoft ne doit jamais atterrir dans un rapport partagé.
+    const clean = String(line).trimEnd()
+        .replace(/(--accessToken\s+)\S+/g, '$1***')
+        .replace(/(--uuid\s+)\S+/g, '$1***')
+        .replace(/(--xuid\s+)\S+/g, '$1***')
+        .replace(/(--clientId\s+)\S+/g, '$1***');
     if (!clean) return;
     mcOutputBuffer.push(clean);
     if (mcOutputBuffer.length > MC_BUFFER_MAX) mcOutputBuffer.shift();

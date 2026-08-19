@@ -1,6 +1,6 @@
 {
   "name": "timerift-launcher",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "TimeRift-Launcher — launcher du modpack Time Rift Universe",
   "author": "PoiBoy34",
   "main": "src/index.js",
@@ -44,12 +44,19 @@
     ],
     "linux": {
       "target": "AppImage",
-      "category": "Game"
+      "category": "Game",
+      "desktop": {
+        "Name": "TimeRift Launcher",
+        "Categories": "Game;",
+        "StartupWMClass": "timerift-launcher"
+      },
+      "icon": "build/icon.png"
     },
     "win": {
       "target": [
         "nsis"
-      ]
+      ],
+      "icon": "build/icon.png"
     },
     "nsis": {
       "oneClick": false,
@@ -57,7 +64,8 @@
       "createDesktopShortcut": true,
       "perMachine": false,
       "deleteAppDataOnUninstall": false,
-      "artifactName": "${productName}-Setup-${version}.${ext}"
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "shortcutName": "TimeRift Launcher"
     },
     "asarUnpack": [
       "bin/**"
