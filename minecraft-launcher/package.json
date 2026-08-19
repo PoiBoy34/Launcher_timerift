@@ -46,9 +46,11 @@
       "target": "AppImage",
       "category": "Game",
       "desktop": {
-        "Name": "TimeRift Launcher",
-        "Categories": "Game;",
-        "StartupWMClass": "timerift-launcher"
+        "entry": {
+          "Name": "TimeRift Launcher",
+          "Categories": "Game;",
+          "StartupWMClass": "timerift-launcher"
+        }
       },
       "icon": "build/icon.png"
     },
