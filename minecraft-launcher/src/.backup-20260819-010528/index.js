@@ -17,7 +17,6 @@ const { Client } = require('minecraft-launcher-core');
 const { Auth } = require('msmc');
 const { fetchCatalog, syncMods, syncDatapacks, syncShaderpacks, syncResourcepacks } = require('./modSync');
 const { fetchWithRedirect, dnsDiagnostic, safeLookup } = require('./netUtils');
-const { pingServer } = require('./mcPing');
 require('./migrate')(app, ['SUS-Launcher','sus-launcher'], ['instances/pack_timerift','java/jre17'], ['msmc-auth.json']);
 
 // --- HACK/PATCH : Corriger les bugs internes de minecraft-launcher-core ---
@@ -85,17 +84,12 @@ process.on('unhandledRejection', (reason) => {
 // Instance unique : deux launchers ouverts = deux jeux + fichiers verrouillés.
 // ---------------------------------------------------------------------------
 if (!app.requestSingleInstanceLock()) {
-    app.exit(0);   // exit(0) et pas quit() : quit() laisse le reste du module s'exécuter
+    app.quit();
 }
 app.on('second-instance', () => {
-    // La fenêtre peut avoir été détruite : sans ce garde, un second lancement
-    // plantait et donnait l'impression que le launcher "ne démarre pas".
-    if (currentWindow && !currentWindow.isDestroyed()) {
+    if (currentWindow) {
         if (currentWindow.isMinimized()) currentWindow.restore();
-        currentWindow.show();
         currentWindow.focus();
-    } else {
-        createWindow();
     }
 });
 
@@ -106,79 +100,7 @@ let currentWindow = null;
 let isLaunching = false;       // anti double-clic sur JOUER
 let lastSelectedPackName = ''; // contexte pour le rapport de diagnostic
 
-let gameStarted = false;       // le jeu est-il réellement affiché ?
-let gameStartTime = 0;
-let gameStartTimer = null;     // repli si aucune ligne de démarrage n'est détectée
-let isAuthenticating = false;  // anti double-clic sur CONNEXION
-
 const TOKEN_MAX_AGE_MS = 50 * 60 * 1000; // les tokens MC expirent ~1h ; marge de sécurité
-
-// Envoi sûr vers le renderer : la fenêtre peut avoir été fermée entre-temps.
-function sendToWindow(channel, payload) {
-    try {
-        if (currentWindow && !currentWindow.isDestroyed()) {
-            currentWindow.webContents.send(channel, payload);
-        }
-    } catch (e) { /* fenêtre en cours de destruction */ }
-}
-
-// ---------------------------------------------------------------------------
-// RAM : allouer plus que la mémoire physique fait planter la JVM au démarrage
-// avec un message incompréhensible. On plafonne systématiquement.
-// ---------------------------------------------------------------------------
-function ramLimits() {
-    const totalGb = os.totalmem() / (1024 * 1024 * 1024);
-    // On laisse 2 Go au système et au launcher lui-même.
-    const maxSafe = Math.max(2, Math.min(32, Math.floor(totalGb - 2)));
-    const recommended = Math.max(2, Math.min(8, Math.floor(totalGb / 2)));
-    return { totalGb: Math.round(totalGb * 10) / 10, maxSafe, recommended };
-}
-
-function clampRam(requested) {
-    const { maxSafe, totalGb } = ramLimits();
-    const asked = parseInt(requested) || 4;
-    const ram = Math.max(2, Math.min(asked, maxSafe));
-    return { ram, asked, clamped: ram !== asked, maxSafe, totalGb };
-}
-
-// Espace disque : un téléchargement de mods qui remplit le disque laisse des
-// fichiers tronqués et un jeu qui ne démarre plus.
-function freeSpaceGb(dir) {
-    try {
-        let probe = dir;
-        while (!fs.existsSync(probe) && path.dirname(probe) !== probe) probe = path.dirname(probe);
-        const st = fs.statfsSync(probe);
-        return (st.bavail * st.bsize) / (1024 * 1024 * 1024);
-    } catch (e) {
-        return null;   // système de fichiers exotique : on ne bloque pas
-    }
-}
-
-// Traduit les erreurs techniques en langage compréhensible par un joueur.
-function humanizeError(err) {
-    const msg = String(err && err.message ? err.message : err);
-    if (/ENOSPC|no space left/i.test(msg))
-        return "Disque plein. Libère de la place puis relance.";
-    if (/EACCES|EPERM|operation not permitted/i.test(msg))
-        return "Accès refusé à un fichier du jeu. Ferme Minecraft s'il tourne déjà, " +
-               "et vérifie que ton antivirus ne bloque pas le dossier du launcher.";
-    if (/EBUSY|resource busy|locked/i.test(msg))
-        return "Un fichier du jeu est verrouillé. Ferme Minecraft puis réessaie.";
-    if (/ENOTFOUND|EAI_AGAIN|getaddrinfo|Invalid IP|Résolution impossible/i.test(msg))
-        return "Impossible de joindre le serveur de téléchargement. Vérifie ta connexion " +
-               "Internet, ou configure les DNS 1.1.1.1 et 8.8.8.8 dans Windows.";
-    if (/ETIMEDOUT|Timeout réseau|Transfert bloqué/i.test(msg))
-        return "La connexion est trop lente ou coupée. Réessaie, le téléchargement " +
-               "reprend là où il s'est arrêté.";
-    if (/Fichier corrompu/i.test(msg))
-        return msg + " — relance simplement, le fichier sera retéléchargé.";
-    if (/Installer Forge introuvable/i.test(msg))
-        return "La version de Forge du modpack est introuvable. Préviens l'admin du serveur.";
-    if (/Java|jre|jdk/i.test(msg))
-        return "Problème avec Java : " + msg + ". Va dans Paramètres → Diagnostic pour " +
-               "envoyer le rapport.";
-    return msg;
-}
 
 autoUpdater.autoDownload = false;
 autoUpdater.autoInstallOnAppQuit = true;
@@ -197,77 +119,17 @@ autoUpdater.on('update-downloaded', () => {
     if (currentWindow) currentWindow.webContents.send('update-downloaded');
 });
 autoUpdater.on('error', (err) => {
-    const msg = String(err && err.message ? err.message : err);
-    // Aucune release publiée sur le dépôt : ce n'est pas une panne, juste
-    // "rien à télécharger". Inutile d'alarmer le joueur.
-    if (/404|Cannot find latest|latest\.yml/i.test(msg)) {
-        log.info('[Updater] aucune release publiée pour le moment');
-        sendToWindow('update-not-available');
-        return;
-    }
-    log.error('[Updater]', msg);
-    sendToWindow('update-error', msg);
+    log.error('[Updater]', err.message);
+    if (currentWindow) currentWindow.webContents.send('update-error', err.message);
 });
 
 launcher.on('debug', (e) => { log.info('[MC]', e); pushMcLine('[debug] ' + e); });
-launcher.on('data',  (e) => { pushMcLine(e); detectGameStarted(e); });
+launcher.on('data',  (e) => { pushMcLine(e); });
 launcher.on('close', (code) => {
-    const durationMs = gameStartTime ? Date.now() - gameStartTime : 0;
-    log.info('[MC] Jeu fermé, code', code, '- durée', Math.round(durationMs / 1000) + 's');
+    log.info('[MC] Jeu fermé, code', code);
     pushMcLine('[launcher] Jeu fermé avec le code ' + code);
     isLaunching = false;
-    gameStarted = false;
-    gameStartTime = 0;
-    if (gameStartTimer) { clearTimeout(gameStartTimer); gameStartTimer = null; }
-    sendToWindow('game-closed', {
-        code,
-        durationMs,
-        // Un code non nul juste après le démarrage = crash. Fermé normalement
-        // par le joueur, Minecraft renvoie 0.
-        crashed: code !== 0 && code !== null,
-        hint: crashHint(code, durationMs)
-    });
 });
-
-// --- Détection « le jeu est réellement affiché » ---------------------------
-// MCLC rend la main dès que le process Java est lancé, or il se passe 20 à 60
-// secondes avant que la fenêtre apparaisse. On guette les lignes que Minecraft
-// écrit quand il est vraiment prêt, pour ne pas laisser le launcher afficher
-// « synchronisation » alors que le jeu tourne.
-const GAME_READY_PATTERNS = [
-    /Setting user:/i,
-    /Sound engine started/i,
-    /Backend library: LWJGL/i,
-    /OpenAL initialized/i,
-    /Created:.*minecraft:textures/i,
-    /Narrator library for x64 successfully loaded/i
-];
-
-function detectGameStarted(line) {
-    if (gameStarted || !isLaunching) return;
-    const text = String(line);
-    if (GAME_READY_PATTERNS.some(re => re.test(text))) markGameStarted();
-}
-
-function markGameStarted() {
-    if (gameStarted) return;
-    gameStarted = true;
-    gameStartTime = Date.now();
-    if (gameStartTimer) { clearTimeout(gameStartTimer); gameStartTimer = null; }
-    log.info('[MC] Jeu démarré');
-    sendToWindow('game-started', {});
-}
-
-function crashHint(code, durationMs) {
-    if (code === 0 || code === null) return null;
-    if (durationMs > 0 && durationMs < 25000) {
-        return "Le jeu s'est arrêté tout de suite. C'est presque toujours un mod " +
-               "en conflit ou trop peu de RAM. Ouvre Paramètres → Diagnostic → " +
-               "Copier le rapport et envoie-le sur Discord.";
-    }
-    return "Le jeu s'est fermé avec le code " + code + ". Si ce n'était pas volontaire, " +
-           "envoie le rapport de diagnostic sur Discord.";
-}
 launcher.on('error', (e) => {
     log.error('[MC ERREUR]', e);
     pushMcLine('[erreur] ' + e);
@@ -277,51 +139,24 @@ launcher.on('error', (e) => {
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 1080, height: 700,
-        minWidth: 900, minHeight: 600,
-        backgroundColor: '#06060f',   // évite le flash blanc au démarrage
-        show: false,
-        autoHideMenuBar: true,
+        width: 960, height: 620,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
                                   contextIsolation: true,
-                                  nodeIntegration: false,
-                                  spellcheck: false
+                                  nodeIntegration: false
         }
     });
-    win.once('ready-to-show', () => win.show());
-    win.webContents.on('render-process-gone', (_e, details) => {
-        log.error('[Renderer] process perdu :', JSON.stringify(details));
-    });
-    // Les liens externes s'ouvrent dans le navigateur, pas dans le launcher.
-    win.webContents.setWindowOpenHandler(({ url }) => {
-        if (/^https?:/.test(url)) shell.openExternal(url);
-        return { action: 'deny' };
-    });
-    win.on('closed', () => { if (currentWindow === win) currentWindow = null; });
     win.loadFile(path.join(__dirname, 'index.html'));
     currentWindow = win;
     return win;
 }
 
 app.whenReady().then(() => {
-    const { totalGb } = ramLimits();
-    log.info('=== TimeRift-Launcher v' + app.getVersion() + ' démarré (' + process.platform + ' ' +
-             os.release() + ', ' + totalGb + ' Go RAM) ===');
+    log.info('=== TimeRift-Launcher v' + app.getVersion() + ' démarré (' + process.platform + ' ' + os.release() + ') ===');
     createWindow();
     setTimeout(() => {
         autoUpdater.checkForUpdates().catch(err => log.error('[Updater check]', err.message));
     }, 3000);
-});
-
-// Sans ce handler, fermer la fenêtre laissait le process en vie : le verrou
-// d'instance unique bloquait alors tout nouveau lancement, et le launcher
-// "ne démarrait plus" jusqu'au redémarrage du PC.
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') app.quit();
-});
-app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
 
 ipcMain.on('check-update', () => {
@@ -345,47 +180,6 @@ ipcMain.handle('get-catalog', async () => {
 });
 
 ipcMain.handle('get-launcher-version', () => app.getVersion());
-
-// Le renderer en a besoin pour borner le curseur de RAM sur la machine réelle.
-ipcMain.handle('get-system-info', () => {
-    const limits = ramLimits();
-    return {
-        totalRamGb: limits.totalGb,
-        maxRamGb: limits.maxSafe,
-        recommendedRamGb: limits.recommended,
-        platform: process.platform,
-        cpuCount: os.cpus().length,
-        freeDiskGb: Math.round((freeSpaceGb(app.getPath('userData')) || 0) * 10) / 10
-    };
-});
-
-// État du serveur multijoueur (affiché sur l'accueil).
-ipcMain.handle('get-server-status', async (event, packData) => {
-    const pack = packData || {};
-    const target = pack.server_host || '';
-    if (!target) return { online: false, error: 'aucun serveur configuré' };
-    const [host, portStr] = target.split(':');
-    try {
-        const res = await pingServer(host, parseInt(portStr || '25565'));
-        return { ...res, host, port: parseInt(portStr || '25565') };
-    } catch (err) {
-        return { online: false, error: err.message };
-    }
-});
-
-// Déconnexion : indispensable quand une session Microsoft se retrouve coincée.
-ipcMain.handle('logout', () => {
-    try {
-        const p = authFilePath();
-        if (fs.existsSync(p)) fs.unlinkSync(p);
-        mcToken = null;
-        mcTokenTimestamp = 0;
-        log.info('[Auth] Session supprimée à la demande du joueur');
-        return { success: true };
-    } catch (err) {
-        return { success: false, error: err.message };
-    }
-});
 
 // ---------------------------------------------------------------------------
 // Auth Microsoft — durcie.
@@ -417,49 +211,15 @@ function saveAuth(msToken) {
     }
 }
 
-function isNetworkError(err) {
-    return /ENOTFOUND|EAI_AGAIN|ETIMEDOUT|ECONNRESET|ECONNREFUSED|network|socket hang up|getaddrinfo/i
-        .test(String(err && err.message ? err.message : err));
-}
-
-// Une session peut être refusée définitivement (mot de passe changé, accès
-// révoqué) : dans ce cas on efface le fichier, sinon le joueur reste bloqué
-// sur "erreur de connexion" à chaque démarrage sans jamais pouvoir se
-// reconnecter proprement.
-function isRevokedSession(err) {
-    return /invalid_grant|invalid_token|unauthorized|expired|AADSTS/i
-        .test(String(err && err.message ? err.message : err));
-}
-
 async function refreshFromSaved() {
     const saved = readSavedAuth();
     if (!saved) throw new Error('Aucune session sauvegardée');
-
-    let lastErr;
-    // Deux tentatives : un timeout réseau isolé ne doit pas déconnecter le joueur.
-    for (let attempt = 1; attempt <= 2; attempt++) {
-        try {
-            const authManager = new Auth('select_account');
-            const xboxManager = await authManager.refresh(saved.refresh_token);
-            mcToken = await xboxManager.getMinecraft();
-            mcTokenTimestamp = Date.now();
-            saveAuth(xboxManager.msToken);
-            return mcToken;
-        } catch (err) {
-            lastErr = err;
-            if (isRevokedSession(err)) {
-                try { fs.unlinkSync(authFilePath()); } catch (e) {}
-                log.info('[Auth] Session révoquée, fichier supprimé');
-                break;
-            }
-            if (attempt < 2 && isNetworkError(err)) {
-                await new Promise(r => setTimeout(r, 2000));
-                continue;
-            }
-            break;
-        }
-    }
-    throw lastErr;
+    const authManager = new Auth('select_account');
+    const xboxManager = await authManager.refresh(saved.refresh_token);
+    mcToken = await xboxManager.getMinecraft();
+    mcTokenTimestamp = Date.now();
+    saveAuth(xboxManager.msToken);
+    return mcToken;
 }
 
 ipcMain.on('auto-login', async (event) => {
@@ -467,57 +227,28 @@ ipcMain.on('auto-login', async (event) => {
         const token = await refreshFromSaved();
         event.sender.send('auth-success', { name: token.profile.name });
     } catch (err) {
-        // Panne réseau ≠ session expirée : dans le premier cas la session est
-        // toujours bonne, on propose de réessayer au lieu d'imposer une
-        // reconnexion Microsoft complète.
-        if (isNetworkError(err) && readSavedAuth()) {
-            log.info('[AutoLogin] Réseau indisponible :', err.message);
-            event.sender.send('auth-error', {
-                message: 'Pas de connexion Internet — impossible de vérifier ta session.',
-                    retryable: true
-            });
-        } else {
-            log.info('[AutoLogin] Session absente ou expirée :', err.message);
-            event.sender.send('auth-missing');
-        }
+        log.info('[AutoLogin] Session absente ou expirée :', err.message);
+        event.sender.send('auth-missing');
     }
 });
 
 ipcMain.on('login-microsoft', async (event) => {
-    // Un double-clic ouvrait deux fenêtres Microsoft, dont l'une restait
-    // bloquée : c'est la panne de login la plus fréquente.
-    if (isAuthenticating) {
-        log.info('[Login] Connexion déjà en cours, clic ignoré');
-        return;
-    }
-    isAuthenticating = true;
     try {
         const authManager = new Auth('select_account');
         const xboxManager = await authManager.launch('electron');
         mcToken = await xboxManager.getMinecraft();
         mcTokenTimestamp = Date.now();
         saveAuth(xboxManager.msToken);
-        log.info('[Login] Connecté :', mcToken.profile.name);
         event.sender.send('auth-success', { name: mcToken.profile.name });
     } catch (err) {
         log.error('[Login]', err.message);
-        const raw = String(err.message || err);
-        let message = raw;
-        if (/cancel|closed|user closed/i.test(raw)) {
+        let message = err.message;
+        if (/network|ENOTFOUND|ETIMEDOUT|EAI_AGAIN/i.test(message)) {
+            message = 'Problème réseau pendant la connexion Microsoft. Vérifie ta connexion / ton DNS puis réessaie. (' + err.message + ')';
+        } else if (/cancel|closed/i.test(message)) {
             message = 'Connexion annulée.';
-        } else if (isNetworkError(err)) {
-            message = 'Problème réseau pendant la connexion Microsoft. Vérifie ta connexion, ' +
-                      'ou configure les DNS 1.1.1.1 et 8.8.8.8, puis réessaie.';
-        } else if (/does not own|not own minecraft|entitlement/i.test(raw)) {
-            message = 'Ce compte Microsoft ne possède pas Minecraft Java Edition. ' +
-                      'Vérifie que tu utilises le bon compte.';
-        } else if (/child|profile/i.test(raw)) {
-            message = 'Ce compte est un compte enfant sans profil Minecraft, ou son profil ' +
-                      "n'est pas encore créé. Ouvre minecraft.net une fois avec ce compte.";
         }
         event.sender.send('auth-error', { message });
-    } finally {
-        isAuthenticating = false;
     }
 });
 
@@ -1054,53 +785,10 @@ async function setupJava(mcVersion, onStatus) {
     return bin;
 }
 
-// Un JRE extrait à moitié (coupure réseau, antivirus) se traduit sinon par un
-// crash Java incompréhensible. On le vérifie avant de lancer le jeu.
-function javaWorks(binPath) {
-    try {
-        const probe = binPath.replace(/javaw\.exe$/i, 'java.exe');
-        const res = cp.spawnSync(probe, ['-version'], { timeout: 15000, windowsHide: true });
-        return res.status === 0 || /version/i.test(String(res.stderr || '') + String(res.stdout || ''));
-    } catch (e) {
-        return false;
-    }
-}
-
-async function setupJavaChecked(mcVersion, onStatus) {
-    let bin = await setupJava(mcVersion, onStatus);
-    if (bin && !javaWorks(bin)) {
-        log.error('[MC] Java installé mais non fonctionnel, réinstallation');
-        if (onStatus) onStatus('Java abîmé, réinstallation...');
-        // Même règle que setupJava, sinon on purge le mauvais dossier.
-        const mcMinor = parseInt(mcVersion.split('.')[1]);
-        const javaMajor = mcMinor >= 20 && mcMinor < 21 ? '17' : '21';
-        const javaRoot = path.join(app.getPath('userData'), 'java', `jre${javaMajor}`);
-        try { fs.rmSync(javaRoot, { recursive: true, force: true }); } catch (e) {}
-        bin = await setupJava(mcVersion, onStatus);
-        if (bin && !javaWorks(bin)) throw new Error('Java ne fonctionne pas après réinstallation');
-    }
-    return bin;
-}
-
 // ---------------------------------------------------------------------------
 // Synchronisation complète d'un pack
 // ---------------------------------------------------------------------------
 async function syncAllContent(event, packData, gameDir) {
-    // Un disque plein en cours de téléchargement laisse des .jar tronqués et
-    // un jeu qui ne démarre plus. On prévient avant, pas après.
-    const free = freeSpaceGb(gameDir);
-    if (free !== null) {
-        if (free < 1) {
-            throw new Error('Disque plein : il reste ' + free.toFixed(1) +
-                            ' Go, il en faut au moins 3 pour installer le modpack.');
-        }
-        if (free < 3) {
-            event.sender.send('sync-status', {
-                message: 'Attention : il ne reste que ' + free.toFixed(1) + ' Go de libre.'
-            });
-        }
-    }
-
     const modsDir          = path.join(gameDir, 'mods');
     const datapacksDir     = path.join(gameDir, 'datapacks');
     const shaderpacksDir   = path.join(gameDir, 'shaderpacks');
@@ -1155,7 +843,7 @@ ipcMain.on('sync-now', async (event, packData) => {
         event.sender.send('sync-status', { message: "Synchronisation terminée ✓" });
     } catch (err) {
         log.error('[SyncNow]', err.message);
-        event.sender.send('sync-status', { message: "Erreur : " + humanizeError(err) });
+        event.sender.send('sync-status', { message: "Erreur sync : " + err.message });
     } finally {
         event.sender.send('sync-done');
     }
@@ -1190,17 +878,7 @@ ipcMain.on('launch-game', async (event, packData) => {
             }
         }
 
-        // Plafonnement RAM : demander plus que la mémoire physique fait échouer
-        // la JVM au démarrage avec un message que personne ne comprend.
-        const ramInfo = clampRam(packData.ram);
-        const ram = ramInfo.ram;
-        if (ramInfo.clamped) {
-            log.info('[MC] RAM demandée ' + ramInfo.asked + ' Go → ramenée à ' + ram + ' Go');
-            event.sender.send('sync-status', {
-                message: 'RAM ramenée à ' + ram + ' Go (ta machine a ' + ramInfo.totalGb + ' Go).'
-            });
-            event.sender.send('ram-clamped', { asked: ramInfo.asked, used: ram, maxRamGb: ramInfo.maxSafe, totalRamGb: ramInfo.totalGb });
-        }
+        const ram = packData.ram || 4;
         const gameDir = path.join(app.getPath('userData'), 'instances', packData.id);
         const modsDir = path.join(gameDir, 'mods');
         const resourcepacksDir = path.join(gameDir, 'resourcepacks');
@@ -1233,7 +911,7 @@ ipcMain.on('launch-game', async (event, packData) => {
 
         let javaPath = null;
         try {
-            javaPath = await setupJavaChecked(packData.minecraft, (msg) => event.sender.send('sync-status', { message: msg }));
+            javaPath = await setupJava(packData.minecraft, (msg) => event.sender.send('sync-status', { message: msg }));
         } catch (err) {
             log.error('[MC] Java auto indisponible :', err.message);
             event.sender.send('sync-status', { message: "Java auto indisponible, utilisation du Java système..." });
@@ -1273,26 +951,10 @@ ipcMain.on('launch-game', async (event, packData) => {
         if (javaPath) opts.javaPath = javaPath;
 
         event.sender.send('sync-status', { message: "Démarrage de Minecraft..." });
-        event.sender.send('game-launching', { ram });
-
-        const proc = await launcher.launch(opts);
-        if (!proc) throw new Error("Minecraft n'a pas pu être démarré (aucun process créé).");
-
-        // Le jeu doit survivre à la fermeture du launcher.
-        try { proc.unref(); } catch (e) {}
-
-        // Repli : si aucune ligne de démarrage connue n'apparaît (langue,
-        // version, mod de log exotique), on considère le jeu lancé au bout
-        // de 90 s plutôt que de laisser le launcher figé sur « démarrage ».
-        if (gameStartTimer) clearTimeout(gameStartTimer);
-        gameStartTimer = setTimeout(() => {
-            if (isLaunching && !gameStarted) markGameStarted();
-        }, 90000);
+        await launcher.launch(opts);
     } catch (err) {
         log.error('[Launch]', err);
         isLaunching = false;
-        gameStarted = false;
-        if (gameStartTimer) { clearTimeout(gameStartTimer); gameStartTimer = null; }
-        event.sender.send('launch-error', humanizeError(err));
+        event.sender.send('launch-error', String(err && err.message ? err.message : err));
     }
 });
