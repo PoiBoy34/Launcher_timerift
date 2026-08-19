@@ -1,0 +1,8 @@
+name = "longerlogintimes-1.0.0-forge-mc1.20"
+filename = "longerlogintimes-1.0.0-forge-mc1.20.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/longerlogintimes-1.0.0-forge-mc1.20.jar"
+hash-format = "sha256"
+hash = "b9463e18f3800c16b3a9c95ee13d7203f274e12cb25132b275f542034a434d50"

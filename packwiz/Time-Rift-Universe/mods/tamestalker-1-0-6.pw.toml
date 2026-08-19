@@ -1,0 +1,8 @@
+name = "tamestalker-1.0.6"
+filename = "tamestalker-1.0.6.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/tamestalker-1.0.6.jar"
+hash-format = "sha256"
+hash = "65ab93d8a8147217b29abee1ce940f25eab3f2e914bb50b81522696f65d18f03"

@@ -1,0 +1,8 @@
+name = "nenus_pop_plushies-2.7.0-forge-1.20.1"
+filename = "nenus_pop_plushies-2.7.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/nenus_pop_plushies-2.7.0-forge-1.20.1.jar"
+hash-format = "sha256"
+hash = "06d04e811ded72833f6542c9dc5039b7ef32f4e2e77b5ddc2e0ecd417cf64a9d"

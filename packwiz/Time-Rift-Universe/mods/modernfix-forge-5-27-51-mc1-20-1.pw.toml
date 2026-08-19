@@ -1,0 +1,8 @@
+name = "modernfix-forge-5.27.51+mc1.20.1"
+filename = "modernfix-forge-5.27.51+mc1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/modernfix-forge-5.27.51%2Bmc1.20.1.jar"
+hash-format = "sha256"
+hash = "ec73870ccd4f0f931d7d619a3e8879f32a647b4bf1d4a32fa76c390c6537d111"

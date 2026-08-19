@@ -1,0 +1,8 @@
+name = "mcwnaturesspirit-forge-1.20.1-1.6"
+filename = "mcwnaturesspirit-forge-1.20.1-1.6.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/mcwnaturesspirit-forge-1.20.1-1.6.jar"
+hash-format = "sha256"
+hash = "aef49cd61868d03ff18a7af4584b876dfd6a0cb0ce62279e5305b01aa92fc3d2"

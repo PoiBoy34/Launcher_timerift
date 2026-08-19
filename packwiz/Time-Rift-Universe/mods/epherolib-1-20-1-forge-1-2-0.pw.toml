@@ -1,0 +1,8 @@
+name = "EpheroLib-1.20.1-FORGE-1.2.0"
+filename = "EpheroLib-1.20.1-FORGE-1.2.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/EpheroLib-1.20.1-FORGE-1.2.0.jar"
+hash-format = "sha256"
+hash = "8924a015f28348c806e6680addc2d5a8bcaf8439dd51ce48ce3b2f2b0e522407"

@@ -1,0 +1,8 @@
+name = "ImmediatelyFast-Forge-1.5.4+1.20.4"
+filename = "ImmediatelyFast-Forge-1.5.4+1.20.4.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ImmediatelyFast-Forge-1.5.4%2B1.20.4.jar"
+hash-format = "sha256"
+hash = "da781a31b2c8d8a845ed48c89b6463f1df3f2c655de10d8d4f5bed8123ff68a8"

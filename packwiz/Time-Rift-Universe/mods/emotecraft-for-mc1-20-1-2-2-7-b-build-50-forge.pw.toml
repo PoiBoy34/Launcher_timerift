@@ -1,0 +1,8 @@
+name = "emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge"
+filename = "emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar"
+hash-format = "sha256"
+hash = "ffaac96e37e6fa950080e2eb4aa361aa8b7bd6c4370862f39893ac2d266d7c14"

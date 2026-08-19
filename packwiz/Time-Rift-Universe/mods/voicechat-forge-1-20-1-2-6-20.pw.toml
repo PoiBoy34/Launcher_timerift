@@ -1,0 +1,8 @@
+name = "voicechat-forge-1.20.1-2.6.20"
+filename = "voicechat-forge-1.20.1-2.6.20.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/voicechat-forge-1.20.1-2.6.20.jar"
+hash-format = "sha256"
+hash = "6267a07e367ea4aa37b3c09f30aeb50148e22e6a28fc885c0c5da4f7fdc189ee"

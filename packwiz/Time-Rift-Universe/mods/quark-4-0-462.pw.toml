@@ -1,0 +1,8 @@
+name = "Quark-4.0-462"
+filename = "Quark-4.0-462.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Quark-4.0-462.jar"
+hash-format = "sha256"
+hash = "c90b96f049d92825c4a103721988c80d72e5ad380d17be46a0f53e114874c478"

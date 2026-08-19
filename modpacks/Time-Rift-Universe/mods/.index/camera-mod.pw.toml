@@ -1,0 +1,25 @@
+filename = 'camera-forge-1.20.1-1.0.20.jar'
+name = 'Camera Mod'
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '[FORGE][1.20.1] Camera Mod 1.20.1-1.0.20'
+
+[download]
+hash = '299cc4fa41a12a247cc73024259247574bfa5d0e'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6480231
+project-id = 289310
+
+[[x-prismlauncher-dependencies]]
+addonId = '238222'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '324717'
+type = 'OPTIONAL'

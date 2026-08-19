@@ -1,0 +1,8 @@
+name = "[CS] Foundation-1.4.6.46"
+filename = "[CS] Foundation-1.4.6.46.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/%5BCS%5D%20Foundation-1.4.6.46.jar"
+hash-format = "sha256"
+hash = "9aedca8b86a6b798b46d69f3a31bb78a1c2ea90b8460d11b75c4e5cb7a7aee8b"

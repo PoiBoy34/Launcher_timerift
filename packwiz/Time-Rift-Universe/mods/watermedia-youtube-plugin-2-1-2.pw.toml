@@ -1,0 +1,8 @@
+name = "watermedia_youtube_plugin-2.1.2"
+filename = "watermedia_youtube_plugin-2.1.2.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/watermedia_youtube_plugin-2.1.2.jar"
+hash-format = "sha256"
+hash = "95c2841103b4d1e0c222f29b49d9500c0d5306772aa18c6eb11925be6ff7507e"

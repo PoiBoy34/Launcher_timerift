@@ -1,0 +1,8 @@
+name = "Oh-The-Biomes-Weve-Gone-Forge-1.8.0"
+filename = "Oh-The-Biomes-Weve-Gone-Forge-1.8.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Oh-The-Biomes-Weve-Gone-Forge-1.8.0.jar"
+hash-format = "sha256"
+hash = "a6d21a08170dbfb6c3983b571bb2c1cd92aa93109f5b3a9b47101688dd81ea01"

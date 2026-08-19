@@ -1,0 +1,8 @@
+name = "KryptonReforged-0.2.3"
+filename = "KryptonReforged-0.2.3.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/KryptonReforged-0.2.3.jar"
+hash-format = "sha256"
+hash = "9b281428d0e7560b7b6e74cdc808c0ffd7a8e662ba84d1a12a6616b49cedec10"

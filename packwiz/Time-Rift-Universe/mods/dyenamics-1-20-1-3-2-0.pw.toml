@@ -1,0 +1,8 @@
+name = "dyenamics-1.20.1-3.2.0"
+filename = "dyenamics-1.20.1-3.2.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/dyenamics-1.20.1-3.2.0.jar"
+hash-format = "sha256"
+hash = "02b787a6f730a5bce51695fd2ab5be509feb004433a6e285a4fbae4ab5e5918c"

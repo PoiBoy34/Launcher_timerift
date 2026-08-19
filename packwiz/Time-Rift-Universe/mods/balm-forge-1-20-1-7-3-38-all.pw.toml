@@ -1,0 +1,8 @@
+name = "balm-forge-1.20.1-7.3.38-all"
+filename = "balm-forge-1.20.1-7.3.38-all.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/balm-forge-1.20.1-7.3.38-all.jar"
+hash-format = "sha256"
+hash = "cbe8008218f0f574bc1f78b532cac5f978c33bf36ae2e14805340eab445fdb08"

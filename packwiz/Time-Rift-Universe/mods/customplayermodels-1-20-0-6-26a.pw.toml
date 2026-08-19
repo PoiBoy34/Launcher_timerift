@@ -1,0 +1,8 @@
+name = "CustomPlayerModels-1.20-0.6.26a"
+filename = "CustomPlayerModels-1.20-0.6.26a.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/CustomPlayerModels-1.20-0.6.26a.jar"
+hash-format = "sha256"
+hash = "486b6e66f2fb81f8de75510a7a86d339b76d35d8d2d40ac433d759931bff490a"

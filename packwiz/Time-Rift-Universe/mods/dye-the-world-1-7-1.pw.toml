@@ -1,0 +1,8 @@
+name = "dye_the_world-1.7.1"
+filename = "dye_the_world-1.7.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/dye_the_world-1.7.1.jar"
+hash-format = "sha256"
+hash = "4029a1b4c22fd57a1472d26314657013098f2e53458d40bd04c4013ffadfe986"

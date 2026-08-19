@@ -1,0 +1,8 @@
+name = "letsdo-farm_and_charm-forge-1.0.14"
+filename = "letsdo-farm_and_charm-forge-1.0.14.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-farm_and_charm-forge-1.0.14.jar"
+hash-format = "sha256"
+hash = "2311790589a58678640cb788de13bebd40efe3ed92f03e82a8fa871850a382eb"

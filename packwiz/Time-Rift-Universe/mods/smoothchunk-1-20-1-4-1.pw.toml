@@ -1,0 +1,8 @@
+name = "smoothchunk-1.20.1-4.1"
+filename = "smoothchunk-1.20.1-4.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/smoothchunk-1.20.1-4.1.jar"
+hash-format = "sha256"
+hash = "0ee48f7bf78070a7cb5858492faa6fe7d58443acbd97a92547bd664ee710e5c1"

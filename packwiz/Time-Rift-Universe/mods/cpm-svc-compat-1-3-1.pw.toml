@@ -1,0 +1,8 @@
+name = "cpm-svc-compat-1.3.1"
+filename = "cpm-svc-compat-1.3.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cpm-svc-compat-1.3.1.jar"
+hash-format = "sha256"
+hash = "1697891cf65ffada7e2fb423ac4998bd85fe002af4a31a08c2fa3677aac86c1b"

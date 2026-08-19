@@ -1,0 +1,8 @@
+name = "entityculling-forge-1.10.5-mc1.20.1"
+filename = "entityculling-forge-1.10.5-mc1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/entityculling-forge-1.10.5-mc1.20.1.jar"
+hash-format = "sha256"
+hash = "db0ee6aaf7e78d758885969e1d237e6efef07109195d4bb81fa06b304ddc12aa"

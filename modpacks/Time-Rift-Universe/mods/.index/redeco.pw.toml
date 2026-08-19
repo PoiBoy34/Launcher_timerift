@@ -1,0 +1,18 @@
+filename = 'redeco-1.14.1-forge-1.20.1.jar'
+name = 'Re:Deco - Vanilla Furniture'
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'redeco-1.14.1-forge-1.20.1.jar'
+
+[download]
+hash = 'edbdd3ecfacb8bec82cb42878e3999582c3bd53d'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6223817
+project-id = 897377

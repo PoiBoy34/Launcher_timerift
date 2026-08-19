@@ -1,0 +1,8 @@
+name = "MoreVanillaArmor-1.20.1-5.1.2"
+filename = "MoreVanillaArmor-1.20.1-5.1.2.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/MoreVanillaArmor-1.20.1-5.1.2.jar"
+hash-format = "sha256"
+hash = "ab7bace652c479138f29cab9b830c3e4b9322209f350147591b6c6d22a1c3d1e"

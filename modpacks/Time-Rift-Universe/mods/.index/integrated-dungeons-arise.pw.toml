@@ -1,0 +1,69 @@
+filename = 'IDA v2.1.1-1.20.1.jar'
+name = 'Integrated Dungeons Arise'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'v2.1.1 ~ IDA 1.20.1'
+
+[download]
+hash = '67a959b40ea05dde1c6659899c5622e4e59bd3dc'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8284363
+project-id = 1325457
+
+[[x-prismlauncher-dependencies]]
+addonId = '551586'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '835687'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '426558'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '896746'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '398521'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '412082'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '250498'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '245755'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '413596'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '243121'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '360203'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '817709'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '328085'
+type = 'REQUIRED'

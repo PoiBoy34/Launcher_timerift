@@ -1,0 +1,8 @@
+name = "Zeta-1.0-31"
+filename = "Zeta-1.0-31.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Zeta-1.0-31.jar"
+hash-format = "sha256"
+hash = "cd1786902a79434f8fd762d741019d9c8a79725fef7e30a89c153c934e1e6a9e"

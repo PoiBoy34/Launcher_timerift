@@ -1,0 +1,8 @@
+name = "canary-mc1.20.1-0.3.3"
+filename = "canary-mc1.20.1-0.3.3.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/canary-mc1.20.1-0.3.3.jar"
+hash-format = "sha256"
+hash = "51f6d78dd6c7874657e5757fd2f5d780aa3cd415052ad071077b8894c6430942"

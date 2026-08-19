@@ -1,0 +1,8 @@
+name = "IDA v2.1.1-1.20.1"
+filename = "IDA v2.1.1-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/IDA%20v2.1.1-1.20.1.jar"
+hash-format = "sha256"
+hash = "4ecd5613a33bbace341c76641a411ed0aaf5cbeb5f30617ffe3f53f83d9833ba"

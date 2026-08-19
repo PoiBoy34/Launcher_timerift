@@ -1,0 +1,8 @@
+name = "framework-forge-1.20.1-0.8.0"
+filename = "framework-forge-1.20.1-0.8.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/framework-forge-1.20.1-0.8.0.jar"
+hash-format = "sha256"
+hash = "37c267f46d8b8dfa81bae8c9fa9fa6467e456cadecae10722ee91b43437f25a0"

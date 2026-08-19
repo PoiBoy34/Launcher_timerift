@@ -1,0 +1,8 @@
+name = "[CS] Roleplay Decor-1.2.6.2"
+filename = "[CS] Roleplay Decor-1.2.6.2.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/%5BCS%5D%20Roleplay%20Decor-1.2.6.2.jar"
+hash-format = "sha256"
+hash = "47a9537acb274a0168813299967b97358d41c0f7ddc47306701750286077a8a4"

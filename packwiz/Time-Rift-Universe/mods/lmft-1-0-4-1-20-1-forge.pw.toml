@@ -1,0 +1,8 @@
+name = "lmft-1.0.4+1.20.1-forge"
+filename = "lmft-1.0.4+1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/lmft-1.0.4%2B1.20.1-forge.jar"
+hash-format = "sha256"
+hash = "e622af8d32c6a41904ceaa2da0174491c68b7acd3ec9888c47991dc9b6f591cc"

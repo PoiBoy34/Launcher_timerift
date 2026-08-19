@@ -1,0 +1,8 @@
+name = "ftb-quests-forge-2001.4.22"
+filename = "ftb-quests-forge-2001.4.22.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-quests-forge-2001.4.22.jar"
+hash-format = "sha256"
+hash = "9ea9d159a78a2724cfe0457b024680fdb52a2126eff9cfa5280a30578f647a68"

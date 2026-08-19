@@ -1,0 +1,8 @@
+name = "chat_heads-0.15.2-forge-1.20"
+filename = "chat_heads-0.15.2-forge-1.20.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/chat_heads-0.15.2-forge-1.20.jar"
+hash-format = "sha256"
+hash = "68bec6d15bc7fce18dcc1b98a3c0d943e6697fcfbf9d7259db5156a7ea324556"

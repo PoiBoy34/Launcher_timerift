@@ -1,0 +1,8 @@
+name = "refurbished_furniture-forge-1.20.1-1.0.20"
+filename = "refurbished_furniture-forge-1.20.1-1.0.20.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/refurbished_furniture-forge-1.20.1-1.0.20.jar"
+hash-format = "sha256"
+hash = "480546202aa21fa07e6b1571f3e3263e5690e9804afb7c35984642bcf473bc6e"

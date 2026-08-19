@@ -1,0 +1,21 @@
+filename = 'craftedcore-5.8.2.jar'
+name = 'CraftedCore'
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.20.1-forge-5.8.2'
+
+[download]
+hash = '5ac49c5ce5342d0595e52b8d65c5345ec23066ee'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7575385
+project-id = 923377
+
+[[x-prismlauncher-dependencies]]
+addonId = '348521'
+type = 'OPTIONAL'

@@ -1,0 +1,8 @@
+name = "plushie_buddies-1.0.1-1.20.1"
+filename = "plushie_buddies-1.0.1-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/plushie_buddies-1.0.1-1.20.1.jar"
+hash-format = "sha256"
+hash = "05cc491174dcbd3146428cf8b384a1bedae3cb73ebc04c6d0716b12e8cf62390"

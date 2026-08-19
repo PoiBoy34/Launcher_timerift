@@ -1,0 +1,21 @@
+filename = '[CS] Foundation-1.4.6.46.jar'
+name = '[CS] Foundation'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '[CS] Foundation-1.4.6.46.jar'
+
+[download]
+hash = '6d60c64d537808ffb3a2f3cd509389f08183a98a'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7786924
+project-id = 920019
+
+[[x-prismlauncher-dependencies]]
+addonId = '309927'
+type = 'REQUIRED'

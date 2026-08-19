@@ -1,0 +1,8 @@
+name = "NoChatRestrictions-Forge-MC1.20.1-v1.0.0"
+filename = "NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar"
+hash-format = "sha256"
+hash = "98c335dc6850b4a0b1ddd7b8dea2712075333044aa60a84d787ee0d8babc360e"

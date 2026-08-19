@@ -1,0 +1,8 @@
+name = "dye_depot-1.3.0-raw"
+filename = "dye_depot-1.3.0-raw.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/dye_depot-1.3.0-raw.jar"
+hash-format = "sha256"
+hash = "14b1dc65823c400dab49d8d3b9143205f95f67fc430d4b399687e19c1ba3c50d"

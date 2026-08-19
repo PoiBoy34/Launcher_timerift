@@ -1,0 +1,21 @@
+filename = 'WaystonesTeleportPets-1.20-1.20.1--1.2.jar'
+name = 'Waystones Teleport Pets'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'WaystonesTeleportPets-1.20-1.20.1 -- 1.2'
+
+[download]
+hash = 'd64055c58edcdbedfd6ebc40dba0b678a6818e57'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4956999
+project-id = 908310
+
+[[x-prismlauncher-dependencies]]
+addonId = '245755'
+type = 'REQUIRED'

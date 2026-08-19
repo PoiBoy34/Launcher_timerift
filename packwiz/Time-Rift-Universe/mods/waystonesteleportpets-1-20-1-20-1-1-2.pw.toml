@@ -1,0 +1,8 @@
+name = "WaystonesTeleportPets-1.20-1.20.1--1.2"
+filename = "WaystonesTeleportPets-1.20-1.20.1--1.2.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/WaystonesTeleportPets-1.20-1.20.1--1.2.jar"
+hash-format = "sha256"
+hash = "dd6155569fb347e808202e7c32e1b80e3d867eb1e9579dc9ea05eb4411078de1"

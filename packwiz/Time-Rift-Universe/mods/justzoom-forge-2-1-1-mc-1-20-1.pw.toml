@@ -1,0 +1,8 @@
+name = "justzoom_forge_2.1.1_MC_1.20.1"
+filename = "justzoom_forge_2.1.1_MC_1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/justzoom_forge_2.1.1_MC_1.20.1.jar"
+hash-format = "sha256"
+hash = "778c75c388a8dffed5bfad25ab9a420dfd6c4ec3bdc1699ec6c2bab2336b5040"

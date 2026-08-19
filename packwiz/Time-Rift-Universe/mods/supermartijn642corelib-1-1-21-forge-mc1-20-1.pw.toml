@@ -1,0 +1,8 @@
+name = "supermartijn642corelib-1.1.21-forge-mc1.20.1"
+filename = "supermartijn642corelib-1.1.21-forge-mc1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/supermartijn642corelib-1.1.21-forge-mc1.20.1.jar"
+hash-format = "sha256"
+hash = "6e4f3664aaa5f4138a43acb246c0d91672372acb78a02b89a0531c11596f2c1c"

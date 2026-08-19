@@ -1,0 +1,1036 @@
+{
+  "version": "1.0.0",
+  "files": [
+    {
+      "name": "[1.20.1] SecurityCraft v1.10.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/%5B1.20.1%5D%20SecurityCraft%20v1.10.1.jar",
+      "sha1": "98e4af60aa0f272105b7ffcdf154d7ab670a73bc"
+    }
+    ,
+    {
+      "name": "absentbydesign-1.20.1-1.9.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/absentbydesign-1.20.1-1.9.0.jar",
+      "sha1": "40372c87461962d36f637c5da7fe25e32442e528"
+    }
+    ,
+    {
+      "name": "addonslib-forge-1.20.1-1.11.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/addonslib-forge-1.20.1-1.11.jar",
+      "sha1": "7477a3b4f63dbcfe596b0cd017ceec44cefc93be"
+    }
+    ,
+    {
+      "name": "alexsmobs-1.22.9.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/alexsmobs-1.22.9.jar",
+      "sha1": "dbf93d2f1da19e16739e91e8ea0fc6f4bc2f228f"
+    }
+    ,
+    {
+      "name": "amendments-1.20-2.2.5.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/amendments-1.20-2.2.5.jar",
+      "sha1": "5d5a1d7d2d2dd37c578fdea2495757baaa624092"
+    }
+    ,
+    {
+      "name": "another_furniture-forge-1.20.1-3.0.4.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/another_furniture-forge-1.20.1-3.0.4.jar",
+      "sha1": "bffc5f4d6ae0a906222990c9d0fa8a632b2aa8ed"
+    }
+    ,
+    {
+      "name": "appleskin-forge-mc1.20.1-2.5.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/appleskin-forge-mc1.20.1-2.5.1.jar",
+      "sha1": "81919356f84eab14258db98924b66c3c38e372b1"
+    }
+    ,
+    {
+      "name": "architectury-9.2.14-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/architectury-9.2.14-forge.jar",
+      "sha1": "a52918a500ff421180a1cbd1a0cabee712134ec4"
+    }
+    ,
+    {
+      "name": "armourersworkshop-forge-1.20.1-3.4.0-beta.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/armourersworkshop-forge-1.20.1-3.4.0-beta.2.jar",
+      "sha1": "52a0a8b4471e48e8ed89d8d6ef1d00fb9ddd6887"
+    }
+    ,
+    {
+      "name": "artifacts-forge-9.5.19.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/artifacts-forge-9.5.19.jar",
+      "sha1": "91ab6fc2cc208550f7fc37c43e42eba81eff318e"
+    }
+    ,
+    {
+      "name": "athena-forge-1.20.1-3.1.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/athena-forge-1.20.1-3.1.2.jar",
+      "sha1": "2acee24454af859988a691f0506271a465f68f7b"
+    }
+    ,
+    {
+      "name": "badpackets-forge-0.4.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/badpackets-forge-0.4.3.jar",
+      "sha1": "34b4ae0b51fe8bb55529dd20968bf58e20b4a21e"
+    }
+    ,
+    {
+      "name": "baguettelib-1.20.1-Forge-1.1.6.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/baguettelib-1.20.1-Forge-1.1.6.jar",
+      "sha1": "8d3c9551bbed4c2f2e8cb2b9a10d31bad4edb52d"
+    }
+    ,
+    {
+      "name": "balm-forge-1.20.1-7.3.38-all.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/balm-forge-1.20.1-7.3.38-all.jar",
+      "sha1": "515905f87268f1eb5af2a9878a84914517efe552"
+    }
+    ,
+    {
+      "name": "basically_signs-1.2.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/basically_signs-1.2.0.jar",
+      "sha1": "42ee7c502ad32969e0cbacfaee82f4c96cf17e50"
+    }
+    ,
+    {
+      "name": "BiomesOPlenty-1.20.1-18.0.0.592.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/BiomesOPlenty-1.20.1-18.0.0.592.jar",
+      "sha1": "15072eb39c35a3f845d4bb04690d4b7f1808a980"
+    }
+    ,
+    {
+      "name": "Bookshelf-Forge-1.20.1-20.2.15.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Bookshelf-Forge-1.20.1-20.2.15.jar",
+      "sha1": "9df4908f606c6dc62a358b3e04e3fdedba59a12c"
+    }
+    ,
+    {
+      "name": "born_in_chaos_[Forge]1.20.1_1.7.5.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/born_in_chaos_%5BForge%5D1.20.1_1.7.5.jar",
+      "sha1": "4d616e1ccef4c55e14b04ca63228d826f4fdda5e"
+    }
+    ,
+    {
+      "name": "caelus-forge-3.2.0+1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/caelus-forge-3.2.0+1.20.1.jar",
+      "sha1": "fa834f140bf7dce7b67c29b46cb531f4309d3209"
+    }
+    ,
+    {
+      "name": "camera-forge-1.20.1-1.0.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/camera-forge-1.20.1-1.0.20.jar",
+      "sha1": "299cc4fa41a12a247cc73024259247574bfa5d0e"
+    }
+    ,
+    {
+      "name": "canary-mc1.20.1-0.3.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/canary-mc1.20.1-0.3.3.jar",
+      "sha1": "898abd9e337ef1c677ce93f5589497a09c7e9850"
+    }
+    ,
+    {
+      "name": "carryon-forge-1.20.1-2.1.2.7.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/carryon-forge-1.20.1-2.1.2.7.jar",
+      "sha1": "9999714ca3dd2f2401f0396ca44f3b27c3784c4f"
+    }
+    ,
+    {
+      "name": "cfm-forge-1.20.1-7.0.0-pre36.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cfm-forge-1.20.1-7.0.0-pre36.jar",
+      "sha1": "66d0ac56f3f6f1efbd6ed7b3cb4a48824d0585c0"
+    }
+    ,
+    {
+      "name": "chat_heads-0.15.2-forge-1.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/chat_heads-0.15.2-forge-1.20.jar",
+      "sha1": "fe49c0f42f21f4c0ea71c3cda7757914cb875ae7"
+    }
+    ,
+    {
+      "name": "chipped-forge-1.20.1-3.0.7.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/chipped-forge-1.20.1-3.0.7.jar",
+      "sha1": "25ee2a0846059d8f21d28b94b7e0229b60cb5499"
+    }
+    ,
+    {
+      "name": "citadel-2.6.3-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/citadel-2.6.3-1.20.1.jar",
+      "sha1": "fb0b1fa96ce28e4be77b38ad95d83c3da7ec8316"
+    }
+    ,
+    {
+      "name": "cloth-config-11.1.136-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cloth-config-11.1.136-forge.jar",
+      "sha1": "c65d07748acc57ceb45d53b3964368b84f34d54f"
+    }
+    ,
+    {
+      "name": "Clumps-forge-1.20.1-12.0.0.4.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Clumps-forge-1.20.1-12.0.0.4.jar",
+      "sha1": "97cc669f68dbe812cb77cc3631339334fc28b877"
+    }
+    ,
+    {
+      "name": "cluttered-[Forge]-3.0.3-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cluttered-%5BForge%5D-3.0.3-1.20.1.jar",
+      "sha1": "c1dca582de21cc540f1a84188db40d65d14c8153"
+    }
+    ,
+    {
+      "name": "collective-1.20.1-8.32.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/collective-1.20.1-8.32.jar",
+      "sha1": "d9aa547fb2894900d2a13c294a5728fca4ad14c4"
+    }
+    ,
+    {
+      "name": "common-networking-forge-1.0.5-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/common-networking-forge-1.0.5-1.20.1.jar",
+      "sha1": "986597ae06f01c9209c111ba6276a171e8977a2c"
+    }
+    ,
+    {
+      "name": "connected_signs-1.0.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/connected_signs-1.0.1.jar",
+      "sha1": "dc70f67016643d2e863e3c876a57ca63f6e9694d"
+    }
+    ,
+    {
+      "name": "COP-Create+6.0.7-3.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/COP-Create+6.0.7-3.1.jar",
+      "sha1": "0a8c8444ced19bc167888b2f5277a3a5ecad97e9"
+    }
+    ,
+    {
+      "name": "Corgilib-Forge-1.20.1-4.0.3.4.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Corgilib-Forge-1.20.1-4.0.3.4.jar",
+      "sha1": "4b08e5f8f2580842eacd5388458a0b52411a9fb2"
+    }
+    ,
+    {
+      "name": "corpsecurioscompat-1.20.1-Forge-3.1.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/corpsecurioscompat-1.20.1-Forge-3.1.3.jar",
+      "sha1": "3b36538ca8c6cc16982788c8e058cb726357a90c"
+    }
+    ,
+    {
+      "name": "corpse-forge-1.20.1-1.0.23.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/corpse-forge-1.20.1-1.0.23.jar",
+      "sha1": "843b16ca88bc5c390bb22a2a84437e6bffdd43dd"
+    }
+    ,
+    {
+      "name": "cosmeticarmorreworked-1.20.1-v1a.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cosmeticarmorreworked-1.20.1-v1a.jar",
+      "sha1": "afd9fa3fe95e8c086e8d439df403ed1e5ea5cbea"
+    }
+    ,
+    {
+      "name": "cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar",
+      "sha1": "68ea28d819d01251c38a9e36a4ce7487cf7b8723"
+    }
+    ,
+    {
+      "name": "cpm-svc-compat-1.3.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cpm-svc-compat-1.3.1.jar",
+      "sha1": "49ca5321b1024a84bbc8705faa3445c3dca1fa2f"
+    }
+    ,
+    {
+      "name": "craftedcore-5.8.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/craftedcore-5.8.2.jar",
+      "sha1": "5ac49c5ce5342d0595e52b8d65c5345ec23066ee"
+    }
+    ,
+    {
+      "name": "create-1.20.1-6.0.8.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/create-1.20.1-6.0.8.jar",
+      "sha1": "b13d912b9247a38d66d11598c121442585a1c1e9"
+    }
+    ,
+    {
+      "name": "create-confectionery1.20.1_v1.1.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/create-confectionery1.20.1_v1.1.3.jar",
+      "sha1": "0c9d9bf97c3eae00d45f71c1132c09c27c7c3353"
+    }
+    ,
+    {
+      "name": "createdeco-2.0.3-1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/createdeco-2.0.3-1.20.1-forge.jar",
+      "sha1": "54c8ad5686b846310bca9e69982a455e668dede3"
+    }
+    ,
+    {
+      "name": "CreativeCore_FORGE_v2.12.39_mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/CreativeCore_FORGE_v2.12.39_mc1.20.1.jar",
+      "sha1": "aef9a8ebdf0be50b6bd8da8ab4153f5085f71a80"
+    }
+    ,
+    {
+      "name": "Croptopia-1.20.1-FORGE-4.0.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Croptopia-1.20.1-FORGE-4.0.1.jar",
+      "sha1": "ddec955cea11a6d65b8bdc50951d11e0896353d6"
+    }
+    ,
+    {
+      "name": "croptopiadelight-1.3.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/croptopiadelight-1.3.2.jar",
+      "sha1": "cd163588421d9fbdf461e9e03151413bbbec8850"
+    }
+    ,
+    {
+      "name": "[CS] Foundation-1.4.6.46.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/%5BCS%5D%20Foundation-1.4.6.46.jar",
+      "sha1": "6d60c64d537808ffb3a2f3cd509389f08183a98a"
+    }
+    ,
+    {
+      "name": "[CS] Roleplay Decor-1.2.6.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/%5BCS%5D%20Roleplay%20Decor-1.2.6.2.jar",
+      "sha1": "ab737b9b65086838fc06e2cb53a597ee6f7a69fd"
+    }
+    ,
+    {
+      "name": "Cuffed-1.20.1-1.3.14.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Cuffed-1.20.1-1.3.14.jar",
+      "sha1": "680bea9fe7015a016d72720cc1ecca9dca97631c"
+    }
+    ,
+    {
+      "name": "cupboard-1.20.1-3.7.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cupboard-1.20.1-3.7.jar",
+      "sha1": "18be26e340ca77a05ee925fdb51400138b8c6539"
+    }
+    ,
+    {
+      "name": "curios-forge-5.14.1+1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/curios-forge-5.14.1+1.20.1.jar",
+      "sha1": "452175b95ad3db6ff58bb8968f6bf7a9d1e0f480"
+    }
+    ,
+    {
+      "name": "Customized-Dungeon-Loot-1.20.x-(v.2.2.2).jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Customized-Dungeon-Loot-1.20.x-%28v.2.2.2%29.jar",
+      "sha1": "d4d77452fbe7c3cd17b6651b1f80435b65e2ce7a"
+    }
+    ,
+    {
+      "name": "CustomPlayerModels-1.20-0.6.26a.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/CustomPlayerModels-1.20-0.6.26a.jar",
+      "sha1": "f9c321333fed2b8499a8d30818844eb55bf5a71a"
+    }
+    ,
+    {
+      "name": "DungeonsArise-1.20.x-2.1.58-release.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/DungeonsArise-1.20.x-2.1.58-release.jar",
+      "sha1": "30b4520e4fab40a6bb6153a2c72e34bcb721f0a5"
+    }
+    ,
+    {
+      "name": "dye_depot-1.3.0-raw.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/dye_depot-1.3.0-raw.jar",
+      "sha1": "10fc53f46da243c0c466a1d4189b6bf55d4487e3"
+    }
+    ,
+    {
+      "name": "dyenamics-1.20.1-3.2.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/dyenamics-1.20.1-3.2.0.jar",
+      "sha1": "c4c393bbf7ffad3299e08b1a6f16cfa9ede42a83"
+    }
+    ,
+    {
+      "name": "dye_the_world-1.7.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/dye_the_world-1.7.1.jar",
+      "sha1": "e3751aff755dd1527804ad8d90376e6d1f45eb5a"
+    }
+    ,
+    {
+      "name": "elevatorid-1.20.1-1.9.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/elevatorid-1.20.1-1.9.1-forge.jar",
+      "sha1": "9117fbb20ce0b3b9abd25e19b3d5987a53be30c9"
+    }
+    ,
+    {
+      "name": "embeddium-0.3.31+mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/embeddium-0.3.31+mc1.20.1.jar",
+      "sha1": "bb2fa8f3e493af16af9160d049f96c614a1faf2f"
+    }
+    ,
+    {
+      "name": "emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar",
+      "sha1": "fcff067375cfe917cbf235218f49ceb58e598a5c"
+    }
+    ,
+    {
+      "name": "entityculling-forge-1.10.5-mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/entityculling-forge-1.10.5-mc1.20.1.jar",
+      "sha1": "b818f6d792b79f4ec116c89704e70292bd6f72b5"
+    }
+    ,
+    {
+      "name": "EpheroLib-1.20.1-FORGE-1.2.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/EpheroLib-1.20.1-FORGE-1.2.0.jar",
+      "sha1": "1eca21b906d38321bf60919dd3b12d160e5e6935"
+    }
+    ,
+    {
+      "name": "Essential_1-4-0-3_forge_1-20-1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Essential_1-4-0-3_forge_1-20-1.jar",
+      "sha1": "6fb933ddef6e3b921a695359174c44ec646b7340"
+    }
+    ,
+    {
+      "name": "ExplorersCompass-1.20.1-1.4.0-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ExplorersCompass-1.20.1-1.4.0-forge.jar",
+      "sha1": "23b7544ab3ebd1ab9c88255434ff9dc7f217766b"
+    }
+    ,
+    {
+      "name": "fabledweaponry-1.20.1-1.0.7.5.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/fabledweaponry-1.20.1-1.0.7.5.jar",
+      "sha1": "281d7539ddb2637b3f2676752b3b461a9df534e9"
+    }
+    ,
+    {
+      "name": "fakename-1.20.1-1.3.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/fakename-1.20.1-1.3.1.jar",
+      "sha1": "dd42ccd6a7d3b15e3cfd437092156aea2c0f1f96"
+    }
+    ,
+    {
+      "name": "fantasyfurniture-1.20.1-9.0.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/fantasyfurniture-1.20.1-9.0.0.jar",
+      "sha1": "85b51d883025413c89ce52ae5e9a7071bc4e53a3"
+    }
+    ,
+    {
+      "name": "FarmersDelight-1.20.1-1.3.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/FarmersDelight-1.20.1-1.3.2.jar",
+      "sha1": "397763ae36dc2e0f526e0338c875850437580157"
+    }
+    ,
+    {
+      "name": "ferritecore-6.0.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ferritecore-6.0.1-forge.jar",
+      "sha1": "417fb6ce8f52abf40bd9d0390371790f9576f8ba"
+    }
+    ,
+    {
+      "name": "flib-1.20.1-0.0.16.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/flib-1.20.1-0.0.16.jar",
+      "sha1": "3f1b66947cf152c88b4f104ac2ad45865d583b97"
+    }
+    ,
+    {
+      "name": "Fnaf Plushie Remastered October 29th.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Fnaf%20Plushie%20Remastered%20October%2029th.jar",
+      "sha1": "f4b4c5a1a072bf275b733b06303e113f17395a0c"
+    }
+    ,
+    {
+      "name": "FramedBlocks-9.4.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/FramedBlocks-9.4.3.jar",
+      "sha1": "740c0feaab75455f32df7e137389f77c83fb490c"
+    }
+    ,
+    {
+      "name": "framework-forge-1.20.1-0.8.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/framework-forge-1.20.1-0.8.0.jar",
+      "sha1": "27347879f8760a7bc0b4bd71977abc50e498811c"
+    }
+    ,
+    {
+      "name": "freecam-forge-1.2.1+1.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/freecam-forge-1.2.1+1.20.jar",
+      "sha1": "e4224b56750a1fe3956ae73a65f4470be3e0df3b"
+    }
+    ,
+    {
+      "name": "ftb-chunks-forge-2001.3.8.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-chunks-forge-2001.3.8.jar",
+      "sha1": "ee2d0cdac6d2ca31f43da30f76dff8c6bae9d687"
+    }
+    ,
+    {
+      "name": "ftb-essentials-forge-2001.2.4.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-essentials-forge-2001.2.4.jar",
+      "sha1": "4f898578e3cc321397dbc59a0c44e2927000bd32"
+    }
+    ,
+    {
+      "name": "ftb-library-forge-2001.2.13.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-library-forge-2001.2.13.jar",
+      "sha1": "a5427d5ff07eb044144ed0b54308370d88bce17e"
+    }
+    ,
+    {
+      "name": "ftb-quests-forge-2001.4.22.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-quests-forge-2001.4.22.jar",
+      "sha1": "70f3bd771ab3b5921ce1ff5f14166fab694ca1aa"
+    }
+    ,
+    {
+      "name": "ftb-teams-forge-2001.3.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-teams-forge-2001.3.2.jar",
+      "sha1": "c49023f5d471aa1ba7fc624d2565fe9e82b7117e"
+    }
+    ,
+    {
+      "name": "ftb-ultimine-forge-2001.1.8.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-ultimine-forge-2001.1.8.jar",
+      "sha1": "c2a1eb72c36ad067faafbff4e1618c4db906de74"
+    }
+    ,
+    {
+      "name": "ftb-xmod-compat-forge-2.1.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ftb-xmod-compat-forge-2.1.3.jar",
+      "sha1": "0584f628d2bc6a612d79dee368324357ebae1423"
+    }
+    ,
+    {
+      "name": "Furniture-Beetle-1.20.1-0.7.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Furniture-Beetle-1.20.1-0.7.0.jar",
+      "sha1": "ba49144979d69bf58efc45444bc86e1f8344b74c"
+    }
+    ,
+    {
+      "name": "furnitury-3.0606-forge-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/furnitury-3.0606-forge-1.20.1.jar",
+      "sha1": "db37a50d28ec90da69e1648cd5b6060b87231660"
+    }
+    ,
+    {
+      "name": "fusion-1.3.3-forge-mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/fusion-1.3.3-forge-mc1.20.1.jar",
+      "sha1": "efc69d175e04f57657206e88d90c42fa9a415936"
+    }
+    ,
+    {
+      "name": "geckolib-forge-1.20.1-4.8.4.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/geckolib-forge-1.20.1-4.8.4.jar",
+      "sha1": "81982cc287f80ffabb2fd36d22cc95e4255c739d"
+    }
+    ,
+    {
+      "name": "goblintraders-forge-1.20.1-1.11.5.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/goblintraders-forge-1.20.1-1.11.5.jar",
+      "sha1": "12bf1775fae7132c4f10ce3f61122bc0a2f171d6"
+    }
+    ,
+    {
+      "name": "handcrafted-forge-1.20.1-3.0.6.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/handcrafted-forge-1.20.1-3.0.6.jar",
+      "sha1": "f1b9a009529134c736c59d6d192d53a4a25e5e5f"
+    }
+    ,
+    {
+      "name": "Icarus-Forge-2.14.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Icarus-Forge-2.14.0.jar",
+      "sha1": "a875413e1a63b326c39f2cb09c092d76af95bce7"
+    }
+    ,
+    {
+      "name": "IDA v2.1.1-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/IDA%20v2.1.1-1.20.1.jar",
+      "sha1": "67a959b40ea05dde1c6659899c5622e4e59bd3dc"
+    }
+    ,
+    {
+      "name": "ImmediatelyFast-Forge-1.5.4+1.20.4.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/ImmediatelyFast-Forge-1.5.4+1.20.4.jar",
+      "sha1": "e2e60485a0c3efa72f1948c952b095150e3ba4fc"
+    }
+    ,
+    {
+      "name": "immersive_melodies-0.6.1+1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/immersive_melodies-0.6.1+1.20.1-forge.jar",
+      "sha1": "4b2f3f2ec9449ecaf5edd8b7a48bec854105c645"
+    }
+    ,
+    {
+      "name": "integrated_api-1.7.4+1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/integrated_api-1.7.4+1.20.1-forge.jar",
+      "sha1": "e54517185ac84c521f9bc202107fdefc56a4171d"
+    }
+    ,
+    {
+      "name": "Jade-1.20.1-Forge-11.13.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Jade-1.20.1-Forge-11.13.2.jar",
+      "sha1": "1997e5fe2db3a0575ca79bfe4720019f01fd2b8c"
+    }
+    ,
+    {
+      "name": "jei-1.20.1-forge-15.20.0.112.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/jei-1.20.1-forge-15.20.0.112.jar",
+      "sha1": "f12b3781af6337794ae6e010420a97585360ea2f"
+    }
+    ,
+    {
+      "name": "journeymap-1.20.1-5.10.3-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/journeymap-1.20.1-5.10.3-forge.jar",
+      "sha1": "d0bbe7c23049892b154b6417904dd027fb53a37a"
+    }
+    ,
+    {
+      "name": "justzoom_forge_2.1.1_MC_1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/justzoom_forge_2.1.1_MC_1.20.1.jar",
+      "sha1": "8bbcdfb61e9f0f738af0efff12c93b8f9daf2fb0"
+    }
+    ,
+    {
+      "name": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "sha1": "2019d821bed9071daabed43979433a5473ceee49"
+    }
+    ,
+    {
+      "name": "kotlinforforge-4.12.0-all.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/kotlinforforge-4.12.0-all.jar",
+      "sha1": "962fdb760409d6d71cbf079235f1ca94e3863a22"
+    }
+    ,
+    {
+      "name": "KryptonReforged-0.2.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/KryptonReforged-0.2.3.jar",
+      "sha1": "92690482dad46a8c9cf28e4b6b26e49f4dc67095"
+    }
+    ,
+    {
+      "name": "kubejs-forge-2001.6.5-build.26.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/kubejs-forge-2001.6.5-build.26.jar",
+      "sha1": "8b0cc9797d4ed00fd2d1002d58960af8b32012ae"
+    }
+    ,
+    {
+      "name": "Lazr's Lib-1.20-1.1.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Lazr%27s%20Lib-1.20-1.1.1.jar",
+      "sha1": "2be2715b4ed23d943533e5bff0929ac6ba271759"
+    }
+    ,
+    {
+      "name": "L_Enders_Cataclysm-3.31.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/L_Enders_Cataclysm-3.31.jar",
+      "sha1": "4f1165cb39521292e826b471b4808bb89f0f4f3f"
+    }
+    ,
+    {
+      "name": "letsdo-API-forge-1.2.15-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-API-forge-1.2.15-forge.jar",
+      "sha1": "a261043a45097d861a13a63ebdbb0ca350e06a63"
+    }
+    ,
+    {
+      "name": "letsdo-bakery-forge-1.1.15.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-bakery-forge-1.1.15.jar",
+      "sha1": "c5cd44088089fca03f3291b851dcb0d00018fecb"
+    }
+    ,
+    {
+      "name": "letsdo-bakery-forge-2.0.6.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-bakery-forge-2.0.6.jar",
+      "sha1": "75f35ba47c07d4af5b8b4e05fcffb74fc1583685"
+    }
+    ,
+    {
+      "name": "letsdo-brewery-forge-1.1.9.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-brewery-forge-1.1.9.jar",
+      "sha1": "50e5181e734dcfc599aa0eaac376ff4e312f63c2"
+    }
+    ,
+    {
+      "name": "letsdo-farm_and_charm-forge-1.0.14.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-farm_and_charm-forge-1.0.14.jar",
+      "sha1": "4db017c18fff8356e1aa5f0e9c683f1af30bec2b"
+    }
+    ,
+    {
+      "name": "letsdo-vinery-forge-1.4.41.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-vinery-forge-1.4.41.jar",
+      "sha1": "68ed3fa9524bef601064f49f60a30423db2f8fdc"
+    }
+    ,
+    {
+      "name": "LetYourFriendEating_1.0.1_1.20.1_Forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/LetYourFriendEating_1.0.1_1.20.1_Forge.jar",
+      "sha1": "c9e45f4bc6543de8c46e2401fb5b0d962ef92d57"
+    }
+    ,
+    {
+      "name": "lionfishapi-3.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/lionfishapi-3.0.jar",
+      "sha1": "79d0404f87fa066480b18c844c1e0b1c5f5475f9"
+    }
+    ,
+    {
+      "name": "lmft-1.0.4+1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/lmft-1.0.4+1.20.1-forge.jar",
+      "sha1": "e44a12eb51813b16faaab89b8073ec63c746c1b0"
+    }
+    ,
+    {
+      "name": "longerlogintimes-1.0.0-forge-mc1.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/longerlogintimes-1.0.0-forge-mc1.20.jar",
+      "sha1": "708e7f8f1dc2955c0331b5fb028fa97720762df3"
+    }
+    ,
+    {
+      "name": "lootr-forge-1.20-0.7.35.94.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/lootr-forge-1.20-0.7.35.94.jar",
+      "sha1": "1ec77a7df8adbf3290a296bf25b8f99f37a60020"
+    }
+    ,
+    {
+      "name": "mcw-furniture-3.4.1-mc1.20.1forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/mcw-furniture-3.4.1-mc1.20.1forge.jar",
+      "sha1": "c05189646bbde5c0d4486b93de0d707115f8445c"
+    }
+    ,
+    {
+      "name": "mcw-mcwfences-1.2.1-mc1.20.1forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/mcw-mcwfences-1.2.1-mc1.20.1forge.jar",
+      "sha1": "d24bc6e1ba7f04e058db019ae5ca3d10edd9510a"
+    }
+    ,
+    {
+      "name": "mcwnaturesspirit-forge-1.20.1-1.6.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/mcwnaturesspirit-forge-1.20.1-1.6.jar",
+      "sha1": "dadaacea7ba16258c31574806d3164edac8bdcf5"
+    }
+    ,
+    {
+      "name": "mcw-roofs-2.3.2-mc1.20.1forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/mcw-roofs-2.3.2-mc1.20.1forge.jar",
+      "sha1": "2b02beb2bd177aa695dc6fc030fc3bb230ca96b1"
+    }
+    ,
+    {
+      "name": "modernfix-forge-5.27.51+mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/modernfix-forge-5.27.51+mc1.20.1.jar",
+      "sha1": "1f69aa3406e24c645d4b9df25c35a6e4deb66527"
+    }
+    ,
+    {
+      "name": "modernlife-1.20.1-1.77.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/modernlife-1.20.1-1.77.jar",
+      "sha1": "3602ceca724625fffcc4ef372e197afe0c6423dc"
+    }
+    ,
+    {
+      "name": "moonlight-1.20-2.16.34-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/moonlight-1.20-2.16.34-forge.jar",
+      "sha1": "5e20f2f0ce56a534accb32f80853d5a246599a4d"
+    }
+    ,
+    {
+      "name": "moresigns-1.20.1-1.2.4.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/moresigns-1.20.1-1.2.4.jar",
+      "sha1": "99213932f5918c89d9828b5d4eda57142babc5f9"
+    }
+    ,
+    {
+      "name": "MoreVanillaArmor-1.20.1-5.1.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/MoreVanillaArmor-1.20.1-5.1.2.jar",
+      "sha1": "2d10e78a328dbdb90d20eacc4d00c7303fde7aaf"
+    }
+    ,
+    {
+      "name": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+      "sha1": "d751153e722a4e014691c83f39f5b07c6ec5333c"
+    }
+    ,
+    {
+      "name": "NaturesCompass-1.20.1-1.12.0-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/NaturesCompass-1.20.1-1.12.0-forge.jar",
+      "sha1": "a8589de59cdd8fed9c29610e624063a2990e422b"
+    }
+    ,
+    {
+      "name": "natures_spirit-2.2.5-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/natures_spirit-2.2.5-1.20.1.jar",
+      "sha1": "edd4d2ea52eed1ff90b412f10eb29f5e4650c147"
+    }
+    ,
+    {
+      "name": "nenus_pop_plushies-2.7.0-forge-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/nenus_pop_plushies-2.7.0-forge-1.20.1.jar",
+      "sha1": "d25f5cab710f55a876e97b0149f858602c29709d"
+    }
+    ,
+    {
+      "name": "NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar",
+      "sha1": "a189c024b78b1057f7bab8a64c327ed27a6d186d"
+    }
+    ,
+    {
+      "name": "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+      "sha1": "9eab28baff36942e1c924489e34753df10f40208"
+    }
+    ,
+    {
+      "name": "oculus-mc1.20.1-1.8.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/oculus-mc1.20.1-1.8.0.jar",
+      "sha1": "984f774e71790deaec674c7587bd24e0711871b2"
+    }
+    ,
+    {
+      "name": "Oh-The-Biomes-Weve-Gone-Forge-1.8.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Oh-The-Biomes-Weve-Gone-Forge-1.8.0.jar",
+      "sha1": "5924e8b6cec952dae66055ebaea1bde6f84e2239"
+    }
+    ,
+    {
+      "name": "Oh-The-Trees-Youll-Grow-forge-1.20.1-1.7.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Oh-The-Trees-Youll-Grow-forge-1.20.1-1.7.0.jar",
+      "sha1": "d110dd6c11216d44e704862db8c107f83eda79fb"
+    }
+    ,
+    {
+      "name": "packetfixer-3.3.2-1.18-1.20.4-merged.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/packetfixer-3.3.2-1.18-1.20.4-merged.jar",
+      "sha1": "79ebc5e66a5ee3ce92afb340e693d506e97361a0"
+    }
+    ,
+    {
+      "name": "Paraglider-forge-20.1.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Paraglider-forge-20.1.3.jar",
+      "sha1": "51fdf94686fc847515e6de8a6c9fd4dab3466ea5"
+    }
+    ,
+    {
+      "name": "Patchouli-1.20.1-85-FORGE.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Patchouli-1.20.1-85-FORGE.jar",
+      "sha1": "d4614507d6e4c7cb464bba5eca891978272062ef"
+    }
+    ,
+    {
+      "name": "Pehkui-3.8.2+1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Pehkui-3.8.2+1.20.1-forge.jar",
+      "sha1": "4bc816efdd8e5e2a97423313674401351710e403"
+    }
+    ,
+    {
+      "name": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+      "sha1": "16808f94a41d45d8e986b4e4ea6b02ba57fa058a"
+    }
+    ,
+    {
+      "name": "playeranimatorapi-forge-1.20.1-2.1.7.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/playeranimatorapi-forge-1.20.1-2.1.7.jar",
+      "sha1": "b386fa6c34fcd6fc31f2a22d1d0556cea06191b9"
+    }
+    ,
+    {
+      "name": "playerladder-0.6.1-forge-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/playerladder-0.6.1-forge-1.20.1.jar",
+      "sha1": "e2096640589fa2091284b720d147a398be865f67"
+    }
+    ,
+    {
+      "name": "PlayerRevive_FORGE_v2.0.31_mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/PlayerRevive_FORGE_v2.0.31_mc1.20.1.jar",
+      "sha1": "84c039f20b8f048c835c429c2c4a9fd82a5e65f6"
+    }
+    ,
+    {
+      "name": "plushie_buddies-1.0.1-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/plushie_buddies-1.0.1-1.20.1.jar",
+      "sha1": "3b6cb09e1559847cf3393ee656790ba9c9c84dc6"
+    }
+    ,
+    {
+      "name": "polymorph-forge-0.49.10+1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/polymorph-forge-0.49.10+1.20.1.jar",
+      "sha1": "e4afd6f512cc06311320357ed974cee586e031c3"
+    }
+    ,
+    {
+      "name": "Quark-4.0-462.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Quark-4.0-462.jar",
+      "sha1": "9b0fb82995622a0070c00827c698c43b49d9d14b"
+    }
+    ,
+    {
+      "name": "redeco-1.14.1-forge-1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/redeco-1.14.1-forge-1.20.1.jar",
+      "sha1": "edbdd3ecfacb8bec82cb42878e3999582c3bd53d"
+    }
+    ,
+    {
+      "name": "refurbished_furniture-forge-1.20.1-1.0.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/refurbished_furniture-forge-1.20.1-1.0.20.jar",
+      "sha1": "ffb68135b88bdbb25224378c76daf922c3f4c322"
+    }
+    ,
+    {
+      "name": "resourcefulconfig-forge-1.20.1-2.1.3.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/resourcefulconfig-forge-1.20.1-2.1.3.jar",
+      "sha1": "597d40920dcc935f963842c817dcc4901862ab14"
+    }
+    ,
+    {
+      "name": "resourcefullib-forge-1.20.1-2.1.29.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/resourcefullib-forge-1.20.1-2.1.29.jar",
+      "sha1": "6fc590a7c56a720fec57e290cbb0a106efbb3ffa"
+    }
+    ,
+    {
+      "name": "rhino-forge-2001.2.3-build.10.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/rhino-forge-2001.2.3-build.10.jar",
+      "sha1": "c83c9b719a6bab33fbd2b3f2f680eb3adbfc1aa1"
+    }
+    ,
+    {
+      "name": "Scribble-1.5.1+mc1.20.1-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Scribble-1.5.1+mc1.20.1-forge.jar",
+      "sha1": "27c1cf656d8817e489a778a562b7f06711e13a09"
+    }
+    ,
+    {
+      "name": "signpost-1.20.1-2.02.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/signpost-1.20.1-2.02.0.jar",
+      "sha1": "0583789e3c39756a8a2d1b1cb2efc5e0a2f525c6"
+    }
+    ,
+    {
+      "name": "simplehats-forge-1.20.1-0.3.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/simplehats-forge-1.20.1-0.3.2.jar",
+      "sha1": "569e96c692cc9536d2cfd68a37aeb097dc92c166"
+    }
+    ,
+    {
+      "name": "sit-1.20.1-1.3.5.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/sit-1.20.1-1.3.5.jar",
+      "sha1": "228fa17d1bbacbc3e49c20e6d9b91050011f6ee2"
+    }
+    ,
+    {
+      "name": "skinlayers3d-forge-1.11.2-mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/skinlayers3d-forge-1.11.2-mc1.20.1.jar",
+      "sha1": "473b49e775f4c9dd746929f20c33f8132b86f235"
+    }
+    ,
+    {
+      "name": "smoothchunk-1.20.1-4.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/smoothchunk-1.20.1-4.1.jar",
+      "sha1": "3e142e4a2e12db1c9a3777879cc021aff49da088"
+    }
+    ,
+    {
+      "name": "sophisticatedbackpacks-1.20.1-3.24.58.1917.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/sophisticatedbackpacks-1.20.1-3.24.58.1917.jar",
+      "sha1": "b2ca73744ab7ad3fa35a4946256a469d34d05c7c"
+    }
+    ,
+    {
+      "name": "sophisticatedcore-1.20.1-1.3.56.2042.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/sophisticatedcore-1.20.1-1.3.56.2042.jar",
+      "sha1": "62698715c9f514a0f76b19fd58a55d97d04c4bb4"
+    }
+    ,
+    {
+      "name": "sophisticatedstorage-1.20.1-1.4.59.1855.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/sophisticatedstorage-1.20.1-1.4.59.1855.jar",
+      "sha1": "8faea49b207d7546845e65ce827198201f414f5e"
+    }
+    ,
+    {
+      "name": "supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+      "sha1": "f80f9eed728966adcfbcc848633e789645057281"
+    }
+    ,
+    {
+      "name": "supermartijn642corelib-1.1.21-forge-mc1.20.1.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/supermartijn642corelib-1.1.21-forge-mc1.20.1.jar",
+      "sha1": "8a403876730a7186165e109f7f5292d31c6c3f4c"
+    }
+    ,
+    {
+      "name": "supplementaries-1.20-3.1.43-forge.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/supplementaries-1.20-3.1.43-forge.jar",
+      "sha1": "326d65a29981de28016e3828370d68a8f63e1798"
+    }
+    ,
+    {
+      "name": "tamestalker-1.0.6.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/tamestalker-1.0.6.jar",
+      "sha1": "1550ff276bd6ce6ecfa03a4fd8f78b8f9ecdf801"
+    }
+    ,
+    {
+      "name": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/TerraBlender-forge-1.20.1-3.0.1.10.jar",
+      "sha1": "3bd99fb59e8b06b04e78b5153790c1e08b2be5dc"
+    }
+    ,
+    {
+      "name": "trade-cycling-forge-1.20.1-1.0.18.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/trade-cycling-forge-1.20.1-1.0.18.jar",
+      "sha1": "fbe3dfba11bd9e1c73b673f252c7d4f5cececa06"
+    }
+    ,
+    {
+      "name": "trashslot-forge-1.20.1-15.1.5.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/trashslot-forge-1.20.1-15.1.5.jar",
+      "sha1": "80cb7633f57f485ccf10b4e9248ee6ce02d0e69e"
+    }
+    ,
+    {
+      "name": "voicechat-forge-1.20.1-2.6.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/voicechat-forge-1.20.1-2.6.20.jar",
+      "sha1": "c5963f6c9a7bca129a10da44c7b62f95edd8049c"
+    }
+    ,
+    {
+      "name": "waterframes-FORGE-mc1.20.1-v2.1.22.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/waterframes-FORGE-mc1.20.1-v2.1.22.jar",
+      "sha1": "b8683a49deee67a153bdc647ad70b5fc464b2b23"
+    }
+    ,
+    {
+      "name": "watermedia-2.1.37.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/watermedia-2.1.37.jar",
+      "sha1": "4a91d20d9a3aa8d66e01f7962d77c974ad538f4f"
+    }
+    ,
+    {
+      "name": "watermedia_youtube_plugin-2.1.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/watermedia_youtube_plugin-2.1.2.jar",
+      "sha1": "1f4d208ed9292189dd99147a9dae7c1d4bc95ad5"
+    }
+    ,
+    {
+      "name": "watervision-FG-mc1.20.1-v0.1.0-alpha.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/watervision-FG-mc1.20.1-v0.1.0-alpha.jar",
+      "sha1": "504baa01e0a46a878187faad3d99bf0c30d08e40"
+    }
+    ,
+    {
+      "name": "waystones-forge-1.20.1-14.1.20.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/waystones-forge-1.20.1-14.1.20.jar",
+      "sha1": "cde06d0f1e9042fb2e0b536a4d2c5443d129dd51"
+    }
+    ,
+    {
+      "name": "WaystonesTeleportPets-1.20-1.20.1--1.2.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/WaystonesTeleportPets-1.20-1.20.1--1.2.jar",
+      "sha1": "d64055c58edcdbedfd6ebc40dba0b678a6818e57"
+    }
+    ,
+    {
+      "name": "xercapaint-1.20.1-1.1.0.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/xercapaint-1.20.1-1.1.0.jar",
+      "sha1": "278e859d83bc44325e7ad8ac3ccbbca75e115039"
+    }
+    ,
+    {
+      "name": "Zeta-1.0-31.jar",
+      "url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Zeta-1.0-31.jar",
+      "sha1": "8c4a8ef0444b53ff408d5b89126285031081d92f"
+    }
+  ]
+}

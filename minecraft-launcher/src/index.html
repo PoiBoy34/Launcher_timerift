@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;500;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Exo 2', sans-serif; background: #0a0a1a; color: #eee; height: 100vh; overflow: hidden; position: relative; }
+  #bg { position: fixed; inset: 0; z-index: 0; background-image: url('bg.png'); background-size: cover; background-position: center; filter: brightness(0.35); transition: opacity 0.3s ease; }
+  #overlay { position: fixed; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(10,10,40,0.7) 0%, rgba(30,0,60,0.5) 50%, rgba(10,10,40,0.8) 100%); }
+  #app { position: relative; z-index: 2; display: flex; flex-direction: column; height: 100vh; padding: 20px 28px; }
+  #header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .logo-block { display: flex; align-items: center; gap: 12px; }
+  .logo-icon { font-size: 36px; }
+  .logo-text { font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 700; background: linear-gradient(90deg, #ffd700, #ff6b35, #e040fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .logo-sub { font-size: 11px; color: #a78bfa; letter-spacing: 0.15em; text-transform: uppercase; }
+  #auth-block { display: flex; align-items: center; gap: 10px; }
+  #login-btn { display: flex; align-items: center; gap: 8px; padding: 8px 18px; background: #107C10; color: white; border: none; border-radius: 20px; cursor: pointer; font-size: 13px; font-family: 'Exo 2', sans-serif; font-weight: 500; transition: all 0.2s; }
+  #login-btn:hover { background: #15a015; transform: translateY(-1px); }
+  #login-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  #user-pill { display: none; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 6px 14px; }
+  .user-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+  #username-label { font-size: 13px; color: #d1fae5; }
+
+  /* LANG SWITCH */
+  #lang-switch { display: flex; border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; overflow: hidden; }
+  #lang-switch .lang-btn { background: transparent; border: none; color: #9ca3af; padding: 6px 12px; cursor: pointer; font-size: 12px; font-family: 'Exo 2', sans-serif; font-weight: 600; transition: all 0.2s; }
+  #lang-switch .lang-btn.active { background: #7c3aed; color: #fff; }
+  #lang-switch .lang-btn:not(.active):hover { color: #e2e8f0; }
+
+  #section-title { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; color: #a78bfa; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+  #packs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; flex: 1; align-content: start; overflow-y: auto; padding-right: 4px; }
+  #packs-grid::-webkit-scrollbar { width: 4px; }
+  #packs-grid::-webkit-scrollbar-thumb { background: #a78bfa44; border-radius: 2px; }
+  .pack-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; cursor: pointer; transition: all 0.25s; position: relative; overflow: hidden; }
+  .pack-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(168,139,250,0.1), rgba(251,191,36,0.05)); opacity: 0; transition: opacity 0.25s; }
+  .pack-card:hover { border-color: rgba(168,139,250,0.5); transform: translateY(-2px); }
+  .pack-card:hover::before { opacity: 1; }
+  .pack-card.selected { border-color: #ffd700; background: rgba(255,215,0,0.08); box-shadow: 0 0 20px rgba(255,215,0,0.15); }
+  .pack-card.selected::before { opacity: 1; }
+  .pack-img-wrap { width: 56px; height: 56px; border-radius: 8px; overflow: hidden; margin-bottom: 10px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
+  .pack-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .pack-img-wrap .pack-emoji { font-size: 28px; }
+  .pack-name { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: #f9fafb; }
+  .pack-desc { font-size: 11px; color: #9ca3af; margin-top: 4px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .pack-meta { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .pack-tag { font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 600; background: rgba(168,139,250,0.2); color: #c4b5fd; }
+  .pack-tag.mc { background: rgba(74,222,128,0.15); color: #6ee7b7; }
+  .selected-badge { position: absolute; top: 8px; right: 8px; width: 20px; height: 20px; border-radius: 50%; background: #ffd700; display: none; align-items: center; justify-content: center; font-size: 11px; color: #000; }
+  .pack-card.selected .selected-badge { display: flex; }
+  #catalog-status { color: #9ca3af; font-size: 13px; padding: 20px 0; }
+  #bottom { margin-top: 16px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px 18px; backdrop-filter: blur(10px); }
+  #selected-info { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  #sel-icon { font-size: 24px; }
+  #sel-name { font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 700; color: #ffd700; }
+  #sel-meta { font-size: 12px; color: #9ca3af; }
+  #launcher-version-tag { margin-left: auto; font-size: 11px; color: #6b7280; font-family: monospace; }
+  #action-row { display: flex; align-items: center; gap: 10px; }
+  #play-btn { flex: 1; padding: 13px 20px; background: linear-gradient(135deg, #7c3aed, #4f46e5); color: white; border: none; border-radius: 10px; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: all 0.25s; text-transform: uppercase; }
+  #play-btn:not(:disabled):hover { background: linear-gradient(135deg, #8b5cf6, #6366f1); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(124,58,237,0.4); }
+  #play-btn:disabled { background: rgba(255,255,255,0.08); color: #4b5563; cursor: not-allowed; }
+  #play-btn.syncing { background: linear-gradient(135deg, #1d4ed8, #1e40af) !important; color: white !important; animation: btnpulse 1.2s infinite; }
+  @keyframes btnpulse { 0%,100%{opacity:1}50%{opacity:0.7} }
+  #sync-log { font-size: 11px; color: #6b7280; margin-top: 8px; min-height: 16px; font-family: monospace; }
+  #sync-bar { width: 100%; height: 3px; margin-top: 6px; display: none; accent-color: #a78bfa; }
+
+  /* SETTINGS PANEL */
+  #settings-btn { width: 42px; height: 42px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; color: #9ca3af; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; flex-shrink: 0; }
+  #settings-btn:hover { background: rgba(255,255,255,0.12); color: #e2e8f0; }
+  #settings-panel { display: none; position: fixed; inset: 0; z-index: 100; align-items: center; justify-content: center; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); }
+  #settings-panel.open { display: flex; }
+  .settings-box { background: #0f0f2a; border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; width: 420px; max-width: 90vw; max-height: 90vh; overflow-y: auto; }
+  .settings-title { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; color: #ffd700; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
+  .settings-close { background: none; border: none; color: #6b7280; font-size: 20px; cursor: pointer; padding: 0; line-height: 1; }
+  .settings-close:hover { color: #e2e8f0; }
+  .settings-section { margin-bottom: 20px; }
+  .settings-label { font-size: 12px; color: #a78bfa; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .ram-row { display: flex; align-items: center; gap: 12px; }
+  .ram-row input[type=range] { flex: 1; accent-color: #7c3aed; }
+  .ram-value { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; color: #ffd700; min-width: 60px; text-align: right; }
+  .folder-btn { display: flex; align-items: center; gap: 8px; width: 100%; padding: 10px 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #cbd5e1; cursor: pointer; font-size: 13px; font-family: 'Exo 2', sans-serif; transition: all 0.2s; margin-bottom: 8px; }
+  .folder-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(168,139,250,0.4); color: #fff; }
+  .folder-btn .folder-icon { font-size: 16px; }
+  .folder-btn.update-check { background: rgba(124,58,237,0.15); border-color: rgba(124,58,237,0.4); color: #c4b5fd; }
+  .folder-btn.update-check:hover { background: rgba(124,58,237,0.25); }
+  .folder-btn.reset-defaults { background: rgba(251,191,36,0.1); border-color: rgba(251,191,36,0.3); color: #fcd34d; }
+  .folder-btn.reset-defaults:hover { background: rgba(251,191,36,0.2); }
+  .folder-btn.sync-now { background: rgba(79,70,229,0.12); border-color: rgba(79,70,229,0.35); color: #c7d2fe; }
+  .folder-btn.sync-now:hover { background: rgba(79,70,229,0.22); }
+  .folder-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  #update-status { font-size: 11px; color: #9ca3af; margin-top: 6px; text-align: center; }
+
+  /* TOGGLE SWITCH */
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+  .toggle-text { flex: 1; }
+  .toggle-text .toggle-title { font-size: 14px; color: #e2e8f0; }
+  .toggle-hint { font-size: 11px; color: #9ca3af; margin-top: 4px; line-height: 1.4; }
+  .switch { position: relative; width: 46px; height: 26px; flex-shrink: 0; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider-sw { position: absolute; inset: 0; background: rgba(255,255,255,0.15); border-radius: 26px; cursor: pointer; transition: 0.25s; }
+  .slider-sw::before { content: ''; position: absolute; height: 20px; width: 20px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: 0.25s; }
+  .switch input:checked + .slider-sw { background: #7c3aed; }
+  .switch input:checked + .slider-sw::before { transform: translateX(20px); }
+
+  /* UPDATE BANNER */
+  #update-banner { display: none; position: fixed; top: 16px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #1e40af, #4f46e5); padding: 10px 16px; border-radius: 10px; align-items: center; gap: 12px; z-index: 50; box-shadow: 0 4px 24px rgba(79,70,229,0.5); }
+  #update-banner.show { display: flex; }
+  #update-text { color: #fff; font-size: 13px; font-weight: 500; }
+  .banner-btn { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.3); padding: 5px 14px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; font-family: 'Exo 2', sans-serif; }
+  .banner-btn:hover { background: rgba(255,255,255,0.3); }
+  .banner-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .banner-close { background: none; border: none; color: #ccc; cursor: pointer; font-size: 14px; padding: 0 4px; }
+  .banner-close:hover { color: #fff; }
+</style>
+</head>
+<body>
+  <div id="bg"></div>
+  <div id="overlay"></div>
+
+  <div id="update-banner">
+    <span id="update-text"></span>
+    <button id="update-action" class="banner-btn" data-i18n="bannerDownload">Télécharger</button>
+    <button id="update-close" class="banner-close">✕</button>
+  </div>
+
+  <div id="settings-panel">
+    <div class="settings-box">
+      <div class="settings-title">
+        <span>⚙️ <span data-i18n="settingsTitle">Paramètres</span></span>
+        <button class="settings-close" id="settings-close">✕</button>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label" data-i18n="ramLabel">Mémoire RAM allouée</div>
+        <div class="ram-row">
+          <input type="range" id="ram-slider" min="2" max="16" step="1" value="4">
+          <div class="ram-value"><span id="ram-display">4</span> <span data-i18n="ramUnit">Go</span></div>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label" data-i18n="syncSectionLabel">Synchronisation des mods</div>
+        <div class="toggle-row">
+          <div class="toggle-text">
+            <div class="toggle-title" data-i18n="autoSyncLabel">Synchronisation automatique</div>
+            <div class="toggle-hint" data-i18n="autoSyncHint">Activé : les mods sont toujours alignés sur le serveur. Désactivé : tu gères tes propres mods (ajout/retrait).</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="auto-sync-toggle">
+            <span class="slider-sw"></span>
+          </label>
+        </div>
+        <button class="folder-btn sync-now" id="btn-sync-now" style="margin-top:12px;">
+          <span class="folder-icon">🔄</span><span class="lbl" data-i18n="syncNowBtn">Synchroniser maintenant</span>
+        </button>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label" data-i18n="foldersLabel">Dossiers du jeu</div>
+        <button class="folder-btn" id="btn-open-mods">
+          <span class="folder-icon">📦</span><span class="lbl" data-i18n="openMods">Ouvrir le dossier mods</span>
+        </button>
+        <button class="folder-btn" id="btn-open-datapacks">
+          <span class="folder-icon">🗂️</span><span class="lbl" data-i18n="openDatapacks">Ouvrir le dossier datapacks</span>
+        </button>
+        <button class="folder-btn" id="btn-open-shaderpacks">
+          <span class="folder-icon">✨</span><span class="lbl" data-i18n="openShaders">Ouvrir le dossier shaderpacks</span>
+        </button>
+        <button class="folder-btn" id="btn-open-resourcepacks">
+          <span class="folder-icon">🎨</span><span class="lbl" data-i18n="openRP">Ouvrir le dossier resource packs</span>
+        </button>
+        <button class="folder-btn" id="btn-open-screenshots">
+          <span class="folder-icon">📷</span><span class="lbl" data-i18n="openScreenshots">Ouvrir les screenshots</span>
+        </button>
+        <button class="folder-btn" id="btn-open-game">
+          <span class="folder-icon">📁</span><span class="lbl" data-i18n="openGame">Ouvrir le dossier du jeu</span>
+        </button>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label" data-i18n="configLabel">Configurations</div>
+        <button class="folder-btn reset-defaults" id="btn-reset-defaults">
+          <span class="folder-icon">🎯</span><span class="lbl" data-i18n="resetDefaults">Réinitialiser keybinds & minimap</span>
+        </button>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label" data-i18n="supportLabel">Support &amp; Diagnostic</div>
+        <button class="folder-btn" id="btn-test-voice">
+          <span class="folder-icon">🎙️</span><span class="lbl" data-i18n="testVoice">Tester le voice chat</span>
+        </button>
+        <button class="folder-btn" id="btn-copy-logs">
+          <span class="folder-icon">📋</span><span class="lbl" data-i18n="copyLogs">Copier le rapport de logs</span>
+        </button>
+        <button class="folder-btn" id="btn-save-logs">
+          <span class="folder-icon">💾</span><span class="lbl" data-i18n="saveLogs">Exporter le rapport (.txt)</span>
+        </button>
+        <button class="folder-btn" id="btn-open-logs">
+          <span class="folder-icon">📂</span><span class="lbl" data-i18n="openLogs">Ouvrir le dossier des logs</span>
+        </button>
+        <pre id="diag-output" style="display:none; margin-top:10px; padding:10px; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.1); border-radius:8px; font-size:11px; color:#cbd5e1; white-space:pre-wrap; word-break:break-word; max-height:180px; overflow-y:auto;"></pre>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label" data-i18n="launcherLabel">Launcher</div>
+        <button class="folder-btn update-check" id="btn-check-update">
+          <span class="folder-icon">🔄</span><span class="lbl" data-i18n="checkUpdate">Vérifier les mises à jour</span>
+        </button>
+        <div id="update-status"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app">
+    <div id="header">
+      <div class="logo-block">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <div class="logo-text">TimeRift-Launcher</div>
+          <div class="logo-sub" data-i18n="logoSub">Time Rift Universe</div>
+        </div>
+      </div>
+      <div id="auth-block">
+        <div id="lang-switch">
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button id="login-btn">Vérification...</button>
+        <div id="user-pill">
+          <div class="user-dot"></div>
+          <span id="username-label">Joueur</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="section-title" data-i18n="sectionTitle">Sélectionner un modpack</div>
+    <div id="catalog-status" data-i18n="catalogLoading">Chargement des modpacks...</div>
+    <div id="packs-grid"></div>
+
+    <div id="bottom">
+      <div id="selected-info">
+        <div id="sel-icon">🎮</div>
+        <div>
+          <div id="sel-name" data-i18n="noPackName">Aucun modpack sélectionné</div>
+          <div id="sel-meta" data-i18n="noPackMeta">Choisissez un modpack ci-dessus</div>
+        </div>
+        <div id="launcher-version-tag"></div>
+      </div>
+      <div id="action-row">
+        <button id="play-btn" disabled data-i18n="playSelect">SÉLECTIONNER UN MODPACK</button>
+        <button id="settings-btn" title="Paramètres">⚙️</button>
+      </div>
+      <div id="sync-log"></div>
+      <progress id="sync-bar" value="0" max="100"></progress>
+    </div>
+  </div>
+
+<script>
+  // ===========================================================================
+  // i18n
+  // ===========================================================================
+  const I18N = {
+    fr: {
+      logoSub: 'Time Rift Universe',
+      loginChecking: 'Vérification...',
+      loginConnecting: 'Connexion...',
+      loginMicrosoft: 'Connexion Microsoft',
+      loginRetry: 'Réessayer',
+      sectionTitle: 'Sélectionner un modpack',
+      catalogLoading: 'Chargement des modpacks...',
+      catalogError: 'Erreur : ',
+      noPackName: 'Aucun modpack sélectionné',
+      noPackMeta: 'Choisissez un modpack ci-dessus',
+      playSelect: 'SÉLECTIONNER UN MODPACK',
+      playLogin: 'CONNECTEZ-VOUS POUR JOUER',
+      playPlay: 'JOUER — ',
+      playSyncing: 'SYNCHRONISATION...',
+      verifyingMods: 'Vérification des mods...',
+      settingsTitle: 'Paramètres',
+      ramLabel: 'Mémoire RAM allouée',
+      ramUnit: 'Go',
+      syncSectionLabel: 'Synchronisation des mods',
+      autoSyncLabel: 'Synchronisation automatique',
+      autoSyncHint: 'Activé : les mods sont toujours alignés sur le serveur. Désactivé : tu gères tes propres mods (ajout/retrait).',
+      syncNowBtn: 'Synchroniser maintenant',
+      foldersLabel: 'Dossiers du jeu',
+      openMods: 'Ouvrir le dossier mods',
+      openDatapacks: 'Ouvrir le dossier datapacks',
+      openShaders: 'Ouvrir le dossier shaderpacks',
+      openRP: 'Ouvrir le dossier resource packs',
+      openScreenshots: 'Ouvrir les screenshots',
+      openGame: 'Ouvrir le dossier du jeu',
+      configLabel: 'Configurations',
+      resetDefaults: 'Réinitialiser keybinds & minimap',
+      launcherLabel: 'Launcher',
+      checkUpdate: 'Vérifier les mises à jour',
+      supportLabel: 'Support & Diagnostic',
+      testVoice: 'Tester le voice chat',
+      copyLogs: 'Copier le rapport de logs',
+      saveLogs: 'Exporter le rapport (.txt)',
+      openLogs: 'Ouvrir le dossier des logs',
+      diagRunning: 'Test en cours...',
+      diagCopied: 'Rapport copié ! Colle-le sur Discord (Ctrl+V).',
+      diagSaved: (p) => 'Rapport enregistré : ' + p,
+      diagError: (m) => 'Erreur : ' + m,
+      bannerDownload: 'Télécharger',
+      bannerDownloading: 'Téléchargement...',
+      bannerInstall: 'Installer & redémarrer',
+      bannerReady: 'Mise à jour prête !',
+      checking: 'Vérification en cours...',
+      upToDate: 'Vous êtes à jour ✓',
+      defaultsReset: 'Configs réinstallées au prochain lancement ✓',
+      selMeta: (p) => 'Minecraft ' + p.minecraft + ' · ' + p.loader + ' · v' + p.version,
+      confirmReset: (name) => 'Réinitialiser les keybinds, options et minimap aux valeurs par défaut pour ' + name + ' ?\n\nCela écrasera tes paramètres actuels au prochain lancement.',
+      updateAvailable: (v) => 'Mise à jour disponible : v' + v,
+      updateAvailableStatus: (v) => 'Nouvelle version v' + v + ' disponible !',
+      updateProgress: (p) => 'Téléchargement : ' + p + '%',
+      errPrefix: (m) => 'Erreur : ' + m
+    },
+    en: {
+      logoSub: 'Time Rift Universe',
+      loginChecking: 'Checking...',
+      loginConnecting: 'Connecting...',
+      loginMicrosoft: 'Microsoft Login',
+      loginRetry: 'Retry',
+      sectionTitle: 'Select a modpack',
+      catalogLoading: 'Loading modpacks...',
+      catalogError: 'Error: ',
+      noPackName: 'No modpack selected',
+      noPackMeta: 'Choose a modpack above',
+      playSelect: 'SELECT A MODPACK',
+      playLogin: 'LOG IN TO PLAY',
+      playPlay: 'PLAY — ',
+      playSyncing: 'SYNCING...',
+      verifyingMods: 'Checking mods...',
+      settingsTitle: 'Settings',
+      ramLabel: 'Allocated RAM',
+      ramUnit: 'GB',
+      syncSectionLabel: 'Mod synchronization',
+      autoSyncLabel: 'Automatic sync',
+      autoSyncHint: 'On: mods always match the server. Off: you manage your own mods (add/remove).',
+      syncNowBtn: 'Sync now',
+      foldersLabel: 'Game folders',
+      openMods: 'Open mods folder',
+      openDatapacks: 'Open datapacks folder',
+      openShaders: 'Open shaderpacks folder',
+      openRP: 'Open resource packs folder',
+      openScreenshots: 'Open screenshots',
+      openGame: 'Open game folder',
+      configLabel: 'Configuration',
+      resetDefaults: 'Reset keybinds & minimap',
+      launcherLabel: 'Launcher',
+      checkUpdate: 'Check for updates',
+      supportLabel: 'Support & Diagnostics',
+      testVoice: 'Test voice chat',
+      copyLogs: 'Copy log report',
+      saveLogs: 'Export report (.txt)',
+      openLogs: 'Open logs folder',
+      diagRunning: 'Running test...',
+      diagCopied: 'Report copied! Paste it on Discord (Ctrl+V).',
+      diagSaved: (p) => 'Report saved: ' + p,
+      diagError: (m) => 'Error: ' + m,
+      bannerDownload: 'Download',
+      bannerDownloading: 'Downloading...',
+      bannerInstall: 'Install & restart',
+      bannerReady: 'Update ready!',
+      checking: 'Checking...',
+      upToDate: "You're up to date ✓",
+      defaultsReset: 'Configs will be reinstalled on next launch ✓',
+      selMeta: (p) => 'Minecraft ' + p.minecraft + ' · ' + p.loader + ' · v' + p.version,
+      confirmReset: (name) => 'Reset keybinds, options and minimap to defaults for ' + name + ' ?\n\nThis will overwrite your current settings on next launch.',
+      updateAvailable: (v) => 'Update available: v' + v,
+      updateAvailableStatus: (v) => 'New version v' + v + ' available!',
+      updateProgress: (p) => 'Downloading: ' + p + '%',
+      errPrefix: (m) => 'Error: ' + m
+    }
+  };
+
+  const MS_SVG = '<svg width="16" height="16" viewBox="0 0 21 21" fill="none"><rect x="1" y="1" width="9" height="9" fill="#F25022"/><rect x="11" y="1" width="9" height="9" fill="#7FBA00"/><rect x="1" y="11" width="9" height="9" fill="#00A4EF"/><rect x="11" y="11" width="9" height="9" fill="#FFB900"/></svg>';
+
+  // ===========================================================================
+  // État global
+  // ===========================================================================
+  let currentLang = localStorage.getItem('lang') || 'fr';
+  let selectedPack = null;
+  let isLoggedIn = false;
+  let loginState = 'checking'; // checking | connecting | login | retry
+  let ramValue = parseInt(localStorage.getItem('ram') || '4');
+
+  let autoSyncStored = localStorage.getItem('autoSync');
+  let autoSync = autoSyncStored === null ? true : autoSyncStored === 'true';
+
+  const L = () => I18N[currentLang];
+
+  // ===========================================================================
+  // i18n : application au DOM
+  // ===========================================================================
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = 'fr';
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = I18N[lang][key];
+      if (typeof val === 'string') el.textContent = val;
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.lang === lang);
+    });
+
+    refreshDynamicTexts();
+  }
+
+  // Re-rend les textes qui dépendent de l'état (login, play, pack sélectionné).
+  function refreshDynamicTexts() {
+    renderLoginBtn();
+    updatePlayBtn();
+    if (selectedPack) {
+      document.getElementById('sel-name').textContent = selectedPack.name;
+      document.getElementById('sel-meta').textContent = L().selMeta(selectedPack);
+    } else {
+      document.getElementById('sel-name').textContent = L().noPackName;
+      document.getElementById('sel-meta').textContent = L().noPackMeta;
+    }
+  }
+
+  function renderLoginBtn() {
+    const btn = document.getElementById('login-btn');
+    if (loginState === 'checking') { btn.textContent = L().loginChecking; btn.disabled = true; }
+    else if (loginState === 'connecting') { btn.textContent = L().loginConnecting; btn.disabled = true; }
+    else if (loginState === 'login') { btn.innerHTML = MS_SVG + ' ' + L().loginMicrosoft; btn.disabled = false; }
+    else if (loginState === 'retry') { btn.innerHTML = MS_SVG + ' ' + L().loginRetry; btn.disabled = false; }
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.addEventListener('click', () => applyLang(b.dataset.lang));
+  });
+
+  // ===========================================================================
+  // RAM
+  // ===========================================================================
+  document.getElementById('ram-slider').value = ramValue;
+  document.getElementById('ram-display').textContent = ramValue;
+  document.getElementById('ram-slider').addEventListener('input', (e) => {
+    ramValue = parseInt(e.target.value);
+    document.getElementById('ram-display').textContent = ramValue;
+    localStorage.setItem('ram', ramValue);
+  });
+
+  // ===========================================================================
+  // Toggle synchronisation automatique
+  // ===========================================================================
+  const syncToggle = document.getElementById('auto-sync-toggle');
+  syncToggle.checked = autoSync;
+  syncToggle.addEventListener('change', (e) => {
+    autoSync = e.target.checked;
+    localStorage.setItem('autoSync', autoSync);
+  });
+
+  // Bouton "Synchroniser maintenant" : force une vraie synchro à la demande.
+  document.getElementById('btn-sync-now').addEventListener('click', () => {
+    if (!selectedPack) return;
+    const b = document.getElementById('btn-sync-now');
+    b.disabled = true;
+    document.getElementById('sync-log').style.color = '#6b7280';
+    document.getElementById('sync-log').textContent = L().verifyingMods;
+    window.api.syncNow({ ...selectedPack });
+  });
+
+  window.api.onSyncDone(() => {
+    document.getElementById('btn-sync-now').disabled = false;
+    const btn = document.getElementById('play-btn');
+    // Si on n'est pas en plein lancement, on remet le bouton play dans son état normal.
+    if (btn.classList.contains('syncing')) {
+      btn.classList.remove('syncing');
+      updatePlayBtn();
+    }
+  });
+
+  // ===========================================================================
+  // Settings panel
+  // ===========================================================================
+  document.getElementById('settings-btn').addEventListener('click', () => {
+    document.getElementById('settings-panel').classList.add('open');
+  });
+  document.getElementById('settings-close').addEventListener('click', () => {
+    document.getElementById('settings-panel').classList.remove('open');
+  });
+  document.getElementById('settings-panel').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('settings-panel'))
+      document.getElementById('settings-panel').classList.remove('open');
+  });
+
+  document.getElementById('btn-open-mods').addEventListener('click', () => { if(selectedPack) window.api.openFolder('mods', selectedPack.id); });
+  document.getElementById('btn-open-datapacks').addEventListener('click', () => { if(selectedPack) window.api.openFolder('datapacks', selectedPack.id); });
+  document.getElementById('btn-open-shaderpacks').addEventListener('click', () => { if(selectedPack) window.api.openFolder('shaderpacks', selectedPack.id); });
+  document.getElementById('btn-open-resourcepacks').addEventListener('click', () => { if(selectedPack) window.api.openFolder('resourcepacks', selectedPack.id); });
+  document.getElementById('btn-open-screenshots').addEventListener('click', () => { if(selectedPack) window.api.openFolder('screenshots', selectedPack.id); });
+  document.getElementById('btn-open-game').addEventListener('click', () => { if(selectedPack) window.api.openFolder('game', selectedPack.id); });
+
+  // Réinitialiser keybinds & configs
+  document.getElementById('btn-reset-defaults').addEventListener('click', () => {
+    if (!selectedPack) return;
+    if (confirm(L().confirmReset(selectedPack.name))) {
+      window.api.resetDefaults(selectedPack.id);
+    }
+  });
+
+  window.api.onDefaultsReset(() => {
+    document.getElementById('update-status').textContent = L().defaultsReset;
+    document.getElementById('update-status').style.color = '#4ade80';
+  });
+
+  // ===========================================================================
+  // Support & Diagnostic
+  // ===========================================================================
+  const diagOutput = document.getElementById('diag-output');
+  function showDiag(text, color) {
+    diagOutput.style.display = 'block';
+    diagOutput.style.color = color || '#cbd5e1';
+    diagOutput.textContent = text;
+  }
+
+  document.getElementById('btn-copy-logs').addEventListener('click', async () => {
+    const b = document.getElementById('btn-copy-logs');
+    b.disabled = true;
+    showDiag(L().diagRunning);
+    // Le rapport est copié dans le presse-papier côté main ; on affiche un aperçu.
+    const res = await window.api.getDiagnostics(selectedPack ? { ...selectedPack } : null);
+    b.disabled = false;
+    if (res.success) {
+      showDiag(L().diagCopied + '\n\n' + res.report.split('\n').slice(0, 12).join('\n') + '\n[...]', '#4ade80');
+    } else {
+      showDiag(L().diagError(res.error), '#ef4444');
+    }
+  });
+
+  document.getElementById('btn-save-logs').addEventListener('click', async () => {
+    const res = await window.api.saveDiagnostics(selectedPack ? { ...selectedPack } : null);
+    if (res.success) showDiag(L().diagSaved(res.path), '#4ade80');
+    else if (res.error !== 'annulé') showDiag(L().diagError(res.error), '#ef4444');
+  });
+
+  document.getElementById('btn-open-logs').addEventListener('click', () => {
+    window.api.openLogsFolder();
+  });
+
+  document.getElementById('btn-test-voice').addEventListener('click', async () => {
+    const b = document.getElementById('btn-test-voice');
+    b.disabled = true;
+    showDiag(L().diagRunning);
+    const res = await window.api.testVoiceChat(selectedPack ? { ...selectedPack } : null);
+    b.disabled = false;
+    const lines = ['Cible voice chat : ' + res.voiceTarget, ''];
+    let allOk = true;
+    for (const step of res.steps) {
+      const icon = step.ok === true ? '✅' : step.ok === false ? '❌' : 'ℹ️';
+      if (step.ok === false) allOk = false;
+      lines.push(icon + ' ' + step.detail);
+    }
+    showDiag(lines.join('\n'), allOk ? '#4ade80' : '#fbbf24');
+  });
+
+  // Version du launcher
+  window.api.getLauncherVersion().then(v => {
+    document.getElementById('launcher-version-tag').textContent = 'v' + v;
+  });
+
+  // Update check manuel
+  document.getElementById('btn-check-update').addEventListener('click', () => {
+    document.getElementById('update-status').textContent = L().checking;
+    document.getElementById('update-status').style.color = '#9ca3af';
+    window.api.checkUpdate();
+  });
+
+  document.getElementById('update-close').addEventListener('click', () => {
+    document.getElementById('update-banner').classList.remove('show');
+  });
+
+  window.api.onUpdateAvailable((data) => {
+    const banner = document.getElementById('update-banner');
+    banner.classList.add('show');
+    document.getElementById('update-text').textContent = L().updateAvailable(data.version);
+    const btn = document.getElementById('update-action');
+    btn.disabled = false;
+    btn.textContent = L().bannerDownload;
+    btn.onclick = () => {
+      btn.disabled = true;
+      btn.textContent = L().bannerDownloading;
+      window.api.downloadUpdate();
+    };
+    document.getElementById('update-status').textContent = L().updateAvailableStatus(data.version);
+    document.getElementById('update-status').style.color = '#a78bfa';
+  });
+
+  window.api.onUpdateNotAvailable(() => {
+    document.getElementById('update-status').textContent = L().upToDate;
+    document.getElementById('update-status').style.color = '#4ade80';
+  });
+
+  window.api.onUpdateProgress((data) => {
+    document.getElementById('update-text').textContent = L().updateProgress(data.pct);
+  });
+
+  window.api.onUpdateDownloaded(() => {
+    const btn = document.getElementById('update-action');
+    btn.disabled = false;
+    btn.textContent = L().bannerInstall;
+    btn.onclick = () => window.api.installUpdate();
+    document.getElementById('update-text').textContent = L().bannerReady;
+  });
+
+  window.api.onUpdateError((msg) => {
+    document.getElementById('update-status').textContent = L().errPrefix(msg);
+    document.getElementById('update-status').style.color = '#ef4444';
+  });
+
+  // ===========================================================================
+  // Catalogue / sélection
+  // ===========================================================================
+  async function loadCatalog() {
+    const result = await window.api.getCatalog();
+    const grid = document.getElementById('packs-grid');
+    const status = document.getElementById('catalog-status');
+    if (!result.success) { status.textContent = L().catalogError + result.error; return; }
+    status.style.display = 'none';
+    result.catalog.modpacks.forEach(pack => {
+      const card = document.createElement('div');
+      card.className = 'pack-card';
+      card.innerHTML = `
+        <div class="selected-badge">✓</div>
+        <div class="pack-img-wrap">
+          <img src="${pack.icon_url}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="">
+          <span class="pack-emoji" style="display:none">🎮</span>
+        </div>
+        <div class="pack-name">${pack.name}</div>
+        <div class="pack-desc">${pack.description}</div>
+        <div class="pack-meta">
+          <span class="pack-tag mc">MC ${pack.minecraft}</span>
+          <span class="pack-tag">${pack.loader}</span>
+          <span class="pack-tag">v${pack.version}</span>
+        </div>`;
+      card.addEventListener('click', () => selectPack(pack, card));
+      grid.appendChild(card);
+    });
+
+    // Launcher mono-pack : on sélectionne le seul modpack disponible et on
+    // masque la grille de choix. Si le catalogue en contient plusieurs un
+    // jour, l'ancien comportement revient tout seul.
+    const cards = grid.querySelectorAll('.pack-card');
+    if (cards.length === 1) {
+      selectPack(result.catalog.modpacks[0], cards[0]);
+      grid.style.display = 'none';
+      const title = document.getElementById('section-title');
+      if (title) title.style.display = 'none';
+    }
+  }
+
+  function selectPack(pack, card) {
+    document.querySelectorAll('.pack-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    selectedPack = pack;
+    document.getElementById('sel-icon').textContent = '⚡';
+    document.getElementById('sel-name').textContent = pack.name;
+    document.getElementById('sel-meta').textContent = L().selMeta(pack);
+    setBackground(pack.background_url);
+    updatePlayBtn();
+  }
+
+  // Change le fond selon le pack sélectionné (fondu).
+  function setBackground(bgUrl) {
+    const bg = document.getElementById('bg');
+    const target = bgUrl && bgUrl.trim() ? bgUrl : 'bg.png';
+    bg.style.opacity = '0';
+    setTimeout(() => {
+      bg.style.backgroundImage = `url('${target}')`;
+      bg.style.opacity = '1';
+    }, 250);
+  }
+
+  function updatePlayBtn() {
+    const btn = document.getElementById('play-btn');
+    if (btn.classList.contains('syncing')) return; // ne pas écraser le texte pendant la synchro/lancement
+    if (selectedPack && isLoggedIn) {
+      btn.disabled = false;
+      btn.textContent = L().playPlay + selectedPack.name.toUpperCase();
+    } else if (!isLoggedIn) {
+      btn.disabled = true;
+      btn.textContent = L().playLogin;
+    } else {
+      btn.disabled = true;
+      btn.textContent = L().playSelect;
+    }
+  }
+
+  // ===========================================================================
+  // Auth / lancement
+  // ===========================================================================
+  document.getElementById('login-btn').addEventListener('click', () => {
+    loginState = 'connecting';
+    renderLoginBtn();
+    window.api.loginMicrosoft();
+  });
+
+  document.getElementById('play-btn').addEventListener('click', () => {
+    if (!selectedPack) return;
+    const btn = document.getElementById('play-btn');
+    btn.disabled = true;
+    btn.classList.add('syncing');
+    btn.textContent = L().playSyncing;
+    document.getElementById('sync-log').style.color = "#6b7280";
+    document.getElementById('sync-log').textContent = L().verifyingMods;
+    window.api.launchGame({ ...selectedPack, ram: ramValue, autoSync });
+  });
+
+  window.api.onAuthSuccess((data) => {
+    document.getElementById('login-btn').style.display = 'none';
+    document.getElementById('user-pill').style.display = 'flex';
+    document.getElementById('username-label').textContent = data.name;
+    isLoggedIn = true;
+    updatePlayBtn();
+  });
+
+  window.api.onAuthError(() => {
+    loginState = 'retry';
+    renderLoginBtn();
+  });
+
+  window.api.onAuthMissing(() => {
+    loginState = 'login';
+    renderLoginBtn();
+  });
+
+  window.api.onSyncStatus((data) => {
+    document.getElementById('sync-log').style.color = "#6b7280";
+    document.getElementById('sync-log').textContent = data.message;
+  });
+
+  window.api.onSyncProgress((data) => {
+    const bar = document.getElementById('sync-bar');
+    bar.style.display = 'block';
+    bar.value = data.pct;
+    document.getElementById('sync-log').textContent = data.fileName + ' — ' + data.pct + '%';
+    if (data.pct >= 100) setTimeout(() => { bar.style.display = 'none'; }, 1000);
+  });
+
+  window.api.onLaunchError((errorMsg) => {
+    const btn = document.getElementById('play-btn');
+    btn.classList.remove('syncing');
+    btn.disabled = false;
+    updatePlayBtn();
+    const log = document.getElementById('sync-log');
+    log.textContent = L().errPrefix(errorMsg);
+    log.style.color = "#ef4444";
+  });
+
+  // ===========================================================================
+  // Init
+  // ===========================================================================
+  applyLang(currentLang);
+  window.api.autoLogin();
+  loadCatalog();
+</script>
+</body>
+</html>

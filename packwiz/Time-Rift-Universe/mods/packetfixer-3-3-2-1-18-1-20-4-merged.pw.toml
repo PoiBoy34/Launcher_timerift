@@ -1,0 +1,8 @@
+name = "packetfixer-3.3.2-1.18-1.20.4-merged"
+filename = "packetfixer-3.3.2-1.18-1.20.4-merged.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/packetfixer-3.3.2-1.18-1.20.4-merged.jar"
+hash-format = "sha256"
+hash = "12f96ecb8e61e0b3d3f0ca5701f479904904501dd251aa7bb60205afdf6bc2ce"

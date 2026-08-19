@@ -1,0 +1,21 @@
+filename = 'playeranimatorapi-forge-1.20.1-2.1.7.jar'
+name = "Zigy's Player Animator API"
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.1.7+1.20.1-NeoForge'
+
+[download]
+hash = 'b386fa6c34fcd6fc31f2a22d1d0556cea06191b9'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6558148
+project-id = 958083
+
+[[x-prismlauncher-dependencies]]
+addonId = '658587'
+type = 'REQUIRED'

@@ -1,0 +1,8 @@
+name = "oculus-mc1.20.1-1.8.0"
+filename = "oculus-mc1.20.1-1.8.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/oculus-mc1.20.1-1.8.0.jar"
+hash-format = "sha256"
+hash = "0945df0cba0f62b3901dd80c3268e5311b770ece78c78037a45db12ac0425fef"

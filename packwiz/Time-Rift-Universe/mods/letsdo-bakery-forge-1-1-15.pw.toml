@@ -1,0 +1,8 @@
+name = "letsdo-bakery-forge-1.1.15"
+filename = "letsdo-bakery-forge-1.1.15.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-bakery-forge-1.1.15.jar"
+hash-format = "sha256"
+hash = "a20f1b1cba05c2cf9f12b28fa28649af417fb9a4b330641236bb1b71c63b0e09"

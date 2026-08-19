@@ -1,0 +1,8 @@
+name = "letsdo-brewery-forge-1.1.9"
+filename = "letsdo-brewery-forge-1.1.9.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-brewery-forge-1.1.9.jar"
+hash-format = "sha256"
+hash = "f889cf1258b6365873b83fb3e533e9a58da4ee381377e55d58f13a4b3cfb4840"

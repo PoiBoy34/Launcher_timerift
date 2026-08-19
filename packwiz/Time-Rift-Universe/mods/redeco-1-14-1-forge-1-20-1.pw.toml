@@ -1,0 +1,8 @@
+name = "redeco-1.14.1-forge-1.20.1"
+filename = "redeco-1.14.1-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/redeco-1.14.1-forge-1.20.1.jar"
+hash-format = "sha256"
+hash = "bc71bd840f5098e82229f938a0862f80c7a91df7ef031c845bdfcb0a5f77523a"

@@ -1,0 +1,8 @@
+name = "playerladder-0.6.1-forge-1.20.1"
+filename = "playerladder-0.6.1-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/playerladder-0.6.1-forge-1.20.1.jar"
+hash-format = "sha256"
+hash = "4aae292862bc63d2a4d214f9389423f6d23eaa1a2f45d7d8855eecb5cb6b296a"

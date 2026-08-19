@@ -1,0 +1,25 @@
+filename = '[CS] Roleplay Decor-1.2.6.2.jar'
+name = '[CS] Roleplay Decor'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '[CS] Roleplay Decor-1.2.6.2.jar'
+
+[download]
+hash = 'ab737b9b65086838fc06e2cb53a597ee6f7a69fd'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7787775
+project-id = 998761
+
+[[x-prismlauncher-dependencies]]
+addonId = '309927'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '920019'
+type = 'REQUIRED'

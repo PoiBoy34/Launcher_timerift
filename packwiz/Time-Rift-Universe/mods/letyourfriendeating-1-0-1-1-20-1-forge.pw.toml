@@ -1,0 +1,8 @@
+name = "LetYourFriendEating_1.0.1_1.20.1_Forge"
+filename = "LetYourFriendEating_1.0.1_1.20.1_Forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/LetYourFriendEating_1.0.1_1.20.1_Forge.jar"
+hash-format = "sha256"
+hash = "cbe3b8420f39c3b6bd850d691cc04e8be53271dda87065c3082fe7bd52375663"

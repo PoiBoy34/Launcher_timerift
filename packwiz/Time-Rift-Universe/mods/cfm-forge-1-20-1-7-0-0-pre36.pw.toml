@@ -1,0 +1,8 @@
+name = "cfm-forge-1.20.1-7.0.0-pre36"
+filename = "cfm-forge-1.20.1-7.0.0-pre36.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cfm-forge-1.20.1-7.0.0-pre36.jar"
+hash-format = "sha256"
+hash = "5fdbc245003d2cb46b92eb9120d7bca7f03422628daed24c818baa195efe8663"

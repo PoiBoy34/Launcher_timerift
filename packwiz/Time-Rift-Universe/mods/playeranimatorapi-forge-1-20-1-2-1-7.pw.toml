@@ -1,0 +1,8 @@
+name = "playeranimatorapi-forge-1.20.1-2.1.7"
+filename = "playeranimatorapi-forge-1.20.1-2.1.7.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/playeranimatorapi-forge-1.20.1-2.1.7.jar"
+hash-format = "sha256"
+hash = "c11b4dd5548c9e922cf9209f5e614bef3074fdcf4e21e23bd035bde191103182"

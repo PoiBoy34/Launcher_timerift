@@ -1,0 +1,8 @@
+name = "letsdo-API-forge-1.2.15-forge"
+filename = "letsdo-API-forge-1.2.15-forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-API-forge-1.2.15-forge.jar"
+hash-format = "sha256"
+hash = "d08b99df112cfffb46e289635c79d4ac8397223320abd6469b47e202e23fa28c"

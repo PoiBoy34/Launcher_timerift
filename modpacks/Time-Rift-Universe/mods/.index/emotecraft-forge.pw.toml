@@ -1,0 +1,25 @@
+filename = 'emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar'
+name = 'Emotecraft (Forge)'
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = 'emotecraft-for-MC1.20.1-2.2.7-b.build.50-forge.jar'
+
+[download]
+hash = 'fcff067375cfe917cbf235218f49ceb58e598a5c'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4632460
+project-id = 403422
+
+[[x-prismlauncher-dependencies]]
+addonId = '623373'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '658587'
+type = 'REQUIRED'

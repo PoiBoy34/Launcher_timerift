@@ -1,0 +1,8 @@
+name = "letsdo-vinery-forge-1.4.41"
+filename = "letsdo-vinery-forge-1.4.41.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/letsdo-vinery-forge-1.4.41.jar"
+hash-format = "sha256"
+hash = "5d7e11f6e2218562ce75d60788fdcfc9ccf59e4532757c18bf37759d5fc739ee"

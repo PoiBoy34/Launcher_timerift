@@ -1,0 +1,8 @@
+name = "waterframes-FORGE-mc1.20.1-v2.1.22"
+filename = "waterframes-FORGE-mc1.20.1-v2.1.22.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/waterframes-FORGE-mc1.20.1-v2.1.22.jar"
+hash-format = "sha256"
+hash = "e7727c11b4d32aa25a7f1176cddef5f230f6f6b6dda3e37bf418b7f025b39ed8"

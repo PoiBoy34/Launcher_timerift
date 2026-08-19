@@ -1,0 +1,8 @@
+name = "craftedcore-5.8.2"
+filename = "craftedcore-5.8.2.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/craftedcore-5.8.2.jar"
+hash-format = "sha256"
+hash = "42d1062707bfc9a61a3b1d8bb269e436ed6b715342cf8d6a065cee37ec40e48b"

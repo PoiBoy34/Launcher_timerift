@@ -1,0 +1,8 @@
+name = "natures_spirit-2.2.5-1.20.1"
+filename = "natures_spirit-2.2.5-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/natures_spirit-2.2.5-1.20.1.jar"
+hash-format = "sha256"
+hash = "07818dd985b100ae71b98c755961c135b07c3a08faf5d95afc87fab71a3b9e86"

@@ -1,0 +1,8 @@
+name = "integrated_api-1.7.4+1.20.1-forge"
+filename = "integrated_api-1.7.4+1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/integrated_api-1.7.4%2B1.20.1-forge.jar"
+hash-format = "sha256"
+hash = "4c7281b8d0f613df04de235dee7509ba90fbeafcfc28f9bde6f02651cb3e1ee9"

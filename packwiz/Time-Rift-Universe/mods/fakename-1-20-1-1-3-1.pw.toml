@@ -1,0 +1,8 @@
+name = "fakename-1.20.1-1.3.1"
+filename = "fakename-1.20.1-1.3.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/fakename-1.20.1-1.3.1.jar"
+hash-format = "sha256"
+hash = "cf63f7b19379928fce1c0ddbcbbeddf088246e63b25a1b872568ceccd7ab87c1"

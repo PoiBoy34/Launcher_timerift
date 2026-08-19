@@ -1,0 +1,8 @@
+name = "carryon-forge-1.20.1-2.1.2.7"
+filename = "carryon-forge-1.20.1-2.1.2.7.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/carryon-forge-1.20.1-2.1.2.7.jar"
+hash-format = "sha256"
+hash = "d7470921fc5ff988788d43409083f62478aecc91f4b81d7e6b63c80c933d4613"

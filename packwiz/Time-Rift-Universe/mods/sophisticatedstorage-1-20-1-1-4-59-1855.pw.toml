@@ -1,0 +1,8 @@
+name = "sophisticatedstorage-1.20.1-1.4.59.1855"
+filename = "sophisticatedstorage-1.20.1-1.4.59.1855.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/sophisticatedstorage-1.20.1-1.4.59.1855.jar"
+hash-format = "sha256"
+hash = "05c50af4b7738800c43ea9b0c1ed084d1188e90bb90224b5fd844d3ce5106d59"

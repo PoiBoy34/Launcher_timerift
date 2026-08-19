@@ -1,0 +1,8 @@
+name = "moresigns-1.20.1-1.2.4"
+filename = "moresigns-1.20.1-1.2.4.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/moresigns-1.20.1-1.2.4.jar"
+hash-format = "sha256"
+hash = "89190de21fcd1f5f1e3eedd71d7e44c50a1ed51cfeeb1bc54944d2209545604e"

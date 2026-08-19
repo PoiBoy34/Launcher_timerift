@@ -1,0 +1,18 @@
+filename = 'fabledweaponry-1.20.1-1.0.7.5.jar'
+name = 'Fabled Weaponry'
+side = ''
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'fabledweaponry-1.20.1-1.0.7.5.jar'
+
+[download]
+hash = '281d7539ddb2637b3f2676752b3b461a9df534e9'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5381204
+project-id = 930340

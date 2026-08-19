@@ -1,0 +1,25 @@
+filename = 'connected_signs-1.0.1.jar'
+name = 'Connected Signs'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'connected_signs-1.0.1.jar'
+
+[download]
+hash = 'dc70f67016643d2e863e3c876a57ca63f6e9694d'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7628586
+project-id = 1461986
+
+[[x-prismlauncher-dependencies]]
+addonId = '877545'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '302973'
+type = 'OPTIONAL'

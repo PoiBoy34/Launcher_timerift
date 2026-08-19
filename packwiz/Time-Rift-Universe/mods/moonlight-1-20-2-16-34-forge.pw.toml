@@ -1,0 +1,8 @@
+name = "moonlight-1.20-2.16.34-forge"
+filename = "moonlight-1.20-2.16.34-forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/moonlight-1.20-2.16.34-forge.jar"
+hash-format = "sha256"
+hash = "007c05ae799417ca7aa26669c5d97be9dface5b6fc27aca4ca8031cafe4ddd6e"

@@ -1,0 +1,25 @@
+filename = 'croptopiadelight-1.3.2.jar'
+name = 'Croptopia Delight'
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.16.5', '1.17.1', '1.18.1', '1.18.2', '1.19', '1.19.2', '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Croptopia Delight 1.16.5-1.20.1 v1.3.2 Forge'
+
+[download]
+hash = 'cd163588421d9fbdf461e9e03151413bbbec8850'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6635544
+project-id = 932098
+
+[[x-prismlauncher-dependencies]]
+addonId = '398521'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '415438'
+type = 'REQUIRED'

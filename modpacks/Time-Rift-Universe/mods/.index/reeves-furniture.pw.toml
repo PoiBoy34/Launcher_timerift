@@ -1,0 +1,18 @@
+filename = 'furnitury-3.0606-forge-1.20.1.jar'
+name = 'Furnitury - Vanilla Styled Furniture'
+side = ''
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Furnitury - 3.0606 - 1.20.1 - Forge'
+
+[download]
+hash = 'db37a50d28ec90da69e1648cd5b6060b87231660'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8221893
+project-id = 399025

@@ -1,0 +1,55 @@
+name: Build mrpack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'modpacks/Time-Rift-Universe/mods/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Generate metadata
+        run: ./packwiz/generate.sh
+
+      - name: Export mrpack
+        working-directory: packwiz/Time-Rift-Universe
+        run: packwiz modrinth export -o "$GITHUB_WORKSPACE/TimeRift.mrpack"
+
+      - name: Export CurseForge zip
+        working-directory: packwiz/Time-Rift-Universe
+        run: packwiz curseforge export -o "$GITHUB_WORKSPACE/TimeRift-CurseForge.zip"
+
+      - name: Commit metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add packwiz/
+          git diff --staged --quiet || git commit -m "auto: refresh packwiz metadata"
+          git push
+
+      - name: Publish modpack release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: mrpack
+          name: "Time Rift — modpack (packwiz)"
+          body: "Modpack auto-généré. À importer dans Prism Launcher ou l'app Modrinth."
+          prerelease: true
+          make_latest: false
+          files: |
+            TimeRift.mrpack
+            TimeRift-CurseForge.zip

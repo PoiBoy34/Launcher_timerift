@@ -1,0 +1,8 @@
+name = "PlayerRevive_FORGE_v2.0.31_mc1.20.1"
+filename = "PlayerRevive_FORGE_v2.0.31_mc1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/PlayerRevive_FORGE_v2.0.31_mc1.20.1.jar"
+hash-format = "sha256"
+hash = "beeb560232c8ee691ea446d53194358902eed8ed38d198515906ac724bdde1fb"

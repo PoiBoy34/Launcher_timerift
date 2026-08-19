@@ -1,0 +1,8 @@
+name = "absentbydesign-1.20.1-1.9.0"
+filename = "absentbydesign-1.20.1-1.9.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/absentbydesign-1.20.1-1.9.0.jar"
+hash-format = "sha256"
+hash = "a69fb71dea0684e5348939c8f79fb68171082c26490156c7298ff5e44d374437"

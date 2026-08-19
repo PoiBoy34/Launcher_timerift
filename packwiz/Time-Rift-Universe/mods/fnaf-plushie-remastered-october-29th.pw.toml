@@ -1,0 +1,8 @@
+name = "Fnaf Plushie Remastered October 29th"
+filename = "Fnaf Plushie Remastered October 29th.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Fnaf%20Plushie%20Remastered%20October%2029th.jar"
+hash-format = "sha256"
+hash = "327ac6301f23853dd452b0d937abee13dc1a042b2220ce34c80f603f7a68cb4c"

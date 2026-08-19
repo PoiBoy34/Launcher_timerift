@@ -1,0 +1,8 @@
+name = "corpsecurioscompat-1.20.1-Forge-3.1.3"
+filename = "corpsecurioscompat-1.20.1-Forge-3.1.3.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/corpsecurioscompat-1.20.1-Forge-3.1.3.jar"
+hash-format = "sha256"
+hash = "fd2cb6cf0dc5b66316c265e54e9681883f33d52427e04aded9bf4ef6c20b9fa3"

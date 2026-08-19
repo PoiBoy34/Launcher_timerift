@@ -1,0 +1,8 @@
+name = "waystones-forge-1.20.1-14.1.20"
+filename = "waystones-forge-1.20.1-14.1.20.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/waystones-forge-1.20.1-14.1.20.jar"
+hash-format = "sha256"
+hash = "5ecc6535596b5954f6293224be6b35805c64f4d4aedc2b9e32d9508dd529cabd"

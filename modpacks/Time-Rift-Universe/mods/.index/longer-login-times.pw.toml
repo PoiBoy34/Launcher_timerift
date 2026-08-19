@@ -1,0 +1,21 @@
+filename = 'longerlogintimes-1.0.0-forge-mc1.20.jar'
+name = 'Longer Login Times'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'longerlogintimes-1.0.0-forge-mc1.20'
+
+[download]
+hash = '708e7f8f1dc2955c0331b5fb028fa97720762df3'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4594800
+project-id = 566374
+
+[[x-prismlauncher-dependencies]]
+addonId = '438332'
+type = 'REQUIRED'

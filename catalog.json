@@ -1,0 +1,24 @@
+{
+  "modpacks": [
+    {
+      "id": "pack_timerift",
+      "name": "Time Rift Universe",
+      "version": "1.0.0",
+      "minecraft": "1.20.1",
+      "loader": "forge",
+      "loader_version": "47.4.20",
+      "description": "Hello, welcome to Time Rift Universe; I hope you enjoy the island, hahaha.",
+      "icon_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/assets/pack-icons/timerift.png",
+      "background_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/assets/pack-backgrounds/timerift.jpg",
+      "manifest_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/manifest.json",
+      "datapacks_manifest_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/datapacks_manifest.json",
+      "shaderpacks_manifest_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/shaderpacks_manifest.json",
+      "resourcepacks_manifest_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/resourcepacks_manifest.json",
+      "servers_dat_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/servers.dat",
+      "defaults_url": "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/defaults.zip",
+      "defaults_sha1": "4adc4d7e861f44af25b4139c08536a1e09ac6286",
+      "server_host": "timerift.mekhorizon.org:25565",
+      "voice_test": "taken-gig.nyc.at.playit.plus:1088"
+    }
+  ]
+}

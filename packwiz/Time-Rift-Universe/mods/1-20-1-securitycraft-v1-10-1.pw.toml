@@ -1,0 +1,8 @@
+name = "[1.20.1] SecurityCraft v1.10.1"
+filename = "[1.20.1] SecurityCraft v1.10.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/%5B1.20.1%5D%20SecurityCraft%20v1.10.1.jar"
+hash-format = "sha256"
+hash = "ec601ba570c5351c353fc1ee0eb2f4823d1c026d265a96d3ec802070a50b6ebd"

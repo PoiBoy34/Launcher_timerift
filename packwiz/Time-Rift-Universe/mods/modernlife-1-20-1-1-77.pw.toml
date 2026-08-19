@@ -1,0 +1,8 @@
+name = "modernlife-1.20.1-1.77"
+filename = "modernlife-1.20.1-1.77.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/modernlife-1.20.1-1.77.jar"
+hash-format = "sha256"
+hash = "dd06a8c73f73e8cf07c2b802018f7e6f496f9a15890bec77e022d3dbc7a296e5"

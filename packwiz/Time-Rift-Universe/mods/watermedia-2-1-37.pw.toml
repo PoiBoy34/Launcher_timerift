@@ -1,0 +1,8 @@
+name = "watermedia-2.1.37"
+filename = "watermedia-2.1.37.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/watermedia-2.1.37.jar"
+hash-format = "sha256"
+hash = "cdd8e1b50e4dee0892c5ed02724cea6b1a74d2b718c7e974c9cfc0efa8c10389"

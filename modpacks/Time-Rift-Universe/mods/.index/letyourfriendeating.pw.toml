@@ -1,0 +1,18 @@
+filename = 'LetYourFriendEating_1.0.1_1.20.1_Forge.jar'
+name = 'Let Your Friend Eating! (Can feed other player)'
+side = ''
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'LetYourFriendEating_1.0.1_1.20.1_Forge.jar'
+
+[download]
+hash = 'c9e45f4bc6543de8c46e2401fb5b0d962ef92d57'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6259265
+project-id = 1206957

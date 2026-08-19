@@ -1,0 +1,21 @@
+filename = 'tamestalker-1.0.6.jar'
+name = 'Befriend the Stalkers'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'tamestalker-1.0.6.jar'
+
+[download]
+hash = '1550ff276bd6ce6ecfa03a4fd8f78b8f9ecdf801'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7572289
+project-id = 1451741
+
+[[x-prismlauncher-dependencies]]
+addonId = '686437'
+type = 'REQUIRED'

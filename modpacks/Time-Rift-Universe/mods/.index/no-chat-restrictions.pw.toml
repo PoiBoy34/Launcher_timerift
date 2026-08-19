@@ -1,0 +1,18 @@
+filename = 'NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar'
+name = 'No Chat Restrictions'
+side = ''
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'NoChatRestrictions-Forge-MC1.20.1-v1.0.0.jar'
+
+[download]
+hash = 'a189c024b78b1057f7bab8a64c327ed27a6d186d'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7538450
+project-id = 1442925

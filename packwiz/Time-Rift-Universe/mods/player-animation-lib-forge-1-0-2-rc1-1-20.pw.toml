@@ -1,0 +1,8 @@
+name = "player-animation-lib-forge-1.0.2-rc1+1.20"
+filename = "player-animation-lib-forge-1.0.2-rc1+1.20.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/player-animation-lib-forge-1.0.2-rc1%2B1.20.jar"
+hash-format = "sha256"
+hash = "90d9965cb9efdbda29fdc5610be3914cf7008bf5c392ff34f7ab25f96a852691"

@@ -1,0 +1,8 @@
+name = "flib-1.20.1-0.0.16"
+filename = "flib-1.20.1-0.0.16.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/flib-1.20.1-0.0.16.jar"
+hash-format = "sha256"
+hash = "5736fd8a36fb3c69f99bae3127fb3743b68c801ffbab71a876c2a203a2c19e0e"

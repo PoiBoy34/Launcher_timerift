@@ -1,0 +1,8 @@
+name = "immersive_melodies-0.6.1+1.20.1-forge"
+filename = "immersive_melodies-0.6.1+1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/immersive_melodies-0.6.1%2B1.20.1-forge.jar"
+hash-format = "sha256"
+hash = "3eaffc8239a87500391e93516f1eb6f05823767fe0153a2644c4996996678783"

@@ -1,0 +1,25 @@
+filename = 'cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar'
+name = 'Corpse x Cosmetic Armor Reworked Compat'
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.19.2', '1.19.3', '1.19.4', '1.20', '1.20.1', '1.20.2', '1.20.3', '1.20.4' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar'
+
+[download]
+hash = '68ea28d819d01251c38a9e36a4ce7487cf7b8723'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6637829
+project-id = 1208436
+
+[[x-prismlauncher-dependencies]]
+addonId = '237307'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '316582'
+type = 'REQUIRED'

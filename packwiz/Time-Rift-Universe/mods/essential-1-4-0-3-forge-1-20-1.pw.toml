@@ -1,0 +1,8 @@
+name = "Essential_1-4-0-3_forge_1-20-1"
+filename = "Essential_1-4-0-3_forge_1-20-1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Essential_1-4-0-3_forge_1-20-1.jar"
+hash-format = "sha256"
+hash = "f4f84339859241a354fe26657d4d6afbd275e45775f452c06303bbe07d2884c0"

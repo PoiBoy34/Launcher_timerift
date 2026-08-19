@@ -1,0 +1,21 @@
+filename = 'watermedia_youtube_plugin-2.1.2.jar'
+name = 'WATERMeDIA: Platform Extension'
+side = ''
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.18.2', '1.19.2', '1.20.1', '1.21.1', '1.21.5' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'WM-YT/2.1.2'
+
+[download]
+hash = '1f4d208ed9292189dd99147a9dae7c1d4bc95ad5'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7543999
+project-id = 1395870
+
+[[x-prismlauncher-dependencies]]
+addonId = '869524'
+type = 'REQUIRED'

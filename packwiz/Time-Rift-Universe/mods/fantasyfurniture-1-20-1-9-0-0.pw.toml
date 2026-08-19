@@ -1,0 +1,8 @@
+name = "fantasyfurniture-1.20.1-9.0.0"
+filename = "fantasyfurniture-1.20.1-9.0.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/fantasyfurniture-1.20.1-9.0.0.jar"
+hash-format = "sha256"
+hash = "11035b688bb1018a7ebfdaa868ffe6ace87e533b678dcf3b689c15f79fe1af2c"

@@ -1,0 +1,8 @@
+name = "watervision-FG-mc1.20.1-v0.1.0-alpha"
+filename = "watervision-FG-mc1.20.1-v0.1.0-alpha.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/watervision-FG-mc1.20.1-v0.1.0-alpha.jar"
+hash-format = "sha256"
+hash = "c04fb6d0996061c2e9d03efd2dd8eea6434355dfcb9618670bd52d632e00b90b"

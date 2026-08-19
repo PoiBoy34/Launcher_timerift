@@ -1,0 +1,8 @@
+name = "Patchouli-1.20.1-85-FORGE"
+filename = "Patchouli-1.20.1-85-FORGE.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Patchouli-1.20.1-85-FORGE.jar"
+hash-format = "sha256"
+hash = "05f7b5d52f6b8f0fd7f8b4822fa07a192d1394d83a264309c9d221d6d4fd21c5"

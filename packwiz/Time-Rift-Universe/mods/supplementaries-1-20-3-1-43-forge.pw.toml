@@ -1,0 +1,8 @@
+name = "supplementaries-1.20-3.1.43-forge"
+filename = "supplementaries-1.20-3.1.43-forge.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/supplementaries-1.20-3.1.43-forge.jar"
+hash-format = "sha256"
+hash = "6132fc23a2fe1da0ca57439b35526ee9a1a8d898397ff8e61b2d08fb951cdf6a"

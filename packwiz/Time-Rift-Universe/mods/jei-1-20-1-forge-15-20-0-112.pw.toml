@@ -1,0 +1,8 @@
+name = "jei-1.20.1-forge-15.20.0.112"
+filename = "jei-1.20.1-forge-15.20.0.112.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/jei-1.20.1-forge-15.20.0.112.jar"
+hash-format = "sha256"
+hash = "2d3a86f503dbde51afa5142951525c37e227016ce8d9e7dfd10bbdd9233f0204"

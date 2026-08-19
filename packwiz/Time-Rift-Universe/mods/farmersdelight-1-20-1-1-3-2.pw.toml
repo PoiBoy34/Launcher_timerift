@@ -1,0 +1,8 @@
+name = "FarmersDelight-1.20.1-1.3.2"
+filename = "FarmersDelight-1.20.1-1.3.2.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/FarmersDelight-1.20.1-1.3.2.jar"
+hash-format = "sha256"
+hash = "47aed94bb9192c4978fe199f9d3ca5895aeccfbe5b5a0869fdf3aa011c2641f7"

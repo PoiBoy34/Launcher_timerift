@@ -1,0 +1,8 @@
+name = "kotlinforforge-4.12.0-all"
+filename = "kotlinforforge-4.12.0-all.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/kotlinforforge-4.12.0-all.jar"
+hash-format = "sha256"
+hash = "6a66c6a68ec09f8717cdbf06883394f0ee24d7cd826b7134a0f81839e8e720ae"

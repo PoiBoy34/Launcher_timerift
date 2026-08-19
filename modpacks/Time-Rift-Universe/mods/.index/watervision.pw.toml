@@ -1,0 +1,21 @@
+filename = 'watervision-FG-mc1.20.1-v0.1.0-alpha.jar'
+name = 'WATERViSION: Videoplayer'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'WaterVision/FG-mc1.20.1-v0.1.0-alpha'
+
+[download]
+hash = '504baa01e0a46a878187faad3d99bf0c30d08e40'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7021437
+project-id = 1167473
+
+[[x-prismlauncher-dependencies]]
+addonId = '869524'
+type = 'REQUIRED'

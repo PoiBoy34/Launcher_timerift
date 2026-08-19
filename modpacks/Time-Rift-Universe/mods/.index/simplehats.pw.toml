@@ -1,0 +1,25 @@
+filename = 'simplehats-forge-1.20.1-0.4.0a.jar'
+name = 'Simple Hats'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'simplehats-forge-1.20.1-0.4.0a.jar'
+
+[download]
+hash = '73a28ae9919c0d1e953805f0f2e8463a34b92fcc'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7598404
+project-id = 631990
+
+[[x-prismlauncher-dependencies]]
+addonId = '938917'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '348521'
+type = 'REQUIRED'

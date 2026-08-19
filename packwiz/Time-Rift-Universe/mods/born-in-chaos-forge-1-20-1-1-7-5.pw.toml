@@ -1,0 +1,8 @@
+name = "born_in_chaos_[Forge]1.20.1_1.7.5"
+filename = "born_in_chaos_[Forge]1.20.1_1.7.5.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/born_in_chaos_%5BForge%5D1.20.1_1.7.5.jar"
+hash-format = "sha256"
+hash = "9f242f4f3330f3d0d985f5f3ce9a92fe09016ff9c6162252f201d17009b28d7d"

@@ -1,0 +1,13 @@
+name = "Time-Rift-Universe"
+author = "PoiBoy34"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "7594a9bc8f10ad06eda5cf4837208bb9673c99d05144350c3f763e4a26bfea0f"
+
+[versions]
+forge = "47.4.20"
+minecraft = "1.20.1"

@@ -1,0 +1,21 @@
+filename = 'letsdo-vinery-forge-1.4.41.jar'
+name = "[Let's Do] Vinery"
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Vinery - 1.4.41 - FORGE - 1.20.1'
+
+[download]
+hash = '68ed3fa9524bef601064f49f60a30423db2f8fdc'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6965751
+project-id = 704465
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'

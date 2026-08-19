@@ -1,0 +1,8 @@
+name = "Oh-The-Trees-Youll-Grow-forge-1.20.1-1.7.0"
+filename = "Oh-The-Trees-Youll-Grow-forge-1.20.1-1.7.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/Oh-The-Trees-Youll-Grow-forge-1.20.1-1.7.0.jar"
+hash-format = "sha256"
+hash = "b3495f6b0ffa38bc5bf7189e29a27eef0c23b58540dc2f32033889c2943e5694"

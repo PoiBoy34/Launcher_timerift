@@ -1,0 +1,21 @@
+filename = 'accessories-neoforge-1.0.0-beta.48+1.20.1.jar'
+name = 'Accessories'
+side = ''
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '[1.20.1] Accessories [Neoforge] - 1.0.0'
+
+[download]
+hash = '22d8aed468ce41b78389b801cec1cd33faa5edb5'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7164863
+project-id = 938917
+
+[[x-prismlauncher-dependencies]]
+addonId = '348521'
+type = 'REQUIRED'

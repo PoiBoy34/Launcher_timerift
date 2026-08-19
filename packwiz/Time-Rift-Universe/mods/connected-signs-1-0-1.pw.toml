@@ -1,0 +1,8 @@
+name = "connected_signs-1.0.1"
+filename = "connected_signs-1.0.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/connected_signs-1.0.1.jar"
+hash-format = "sha256"
+hash = "135418472b43aa2f88fe2be53a59a04c018428785619a9dee56b8825342d452d"

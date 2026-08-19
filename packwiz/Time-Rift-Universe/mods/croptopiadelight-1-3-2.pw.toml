@@ -1,0 +1,8 @@
+name = "croptopiadelight-1.3.2"
+filename = "croptopiadelight-1.3.2.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/croptopiadelight-1.3.2.jar"
+hash-format = "sha256"
+hash = "a36fb828fdecd83453226a350d9aeb529ac4f3c44a86fe632f4e220b2ecfbaa9"

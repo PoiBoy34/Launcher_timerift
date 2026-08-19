@@ -1,0 +1,8 @@
+name = "sophisticatedcore-1.20.1-1.3.56.2042"
+filename = "sophisticatedcore-1.20.1-1.3.56.2042.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/sophisticatedcore-1.20.1-1.3.56.2042.jar"
+hash-format = "sha256"
+hash = "ef89c32b3c427acf59d17b4a30ed0ab22bdc79bb2369d85d36fbd9b61a3085b2"

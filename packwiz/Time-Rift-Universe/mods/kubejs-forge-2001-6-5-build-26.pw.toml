@@ -1,0 +1,8 @@
+name = "kubejs-forge-2001.6.5-build.26"
+filename = "kubejs-forge-2001.6.5-build.26.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/kubejs-forge-2001.6.5-build.26.jar"
+hash-format = "sha256"
+hash = "1769312192fbf9d72f45054ba61130523bfb471b5f480a4bff8c210ec09400bb"

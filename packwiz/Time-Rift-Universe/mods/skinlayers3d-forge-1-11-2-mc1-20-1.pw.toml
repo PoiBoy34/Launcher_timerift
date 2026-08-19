@@ -1,0 +1,8 @@
+name = "skinlayers3d-forge-1.11.2-mc1.20.1"
+filename = "skinlayers3d-forge-1.11.2-mc1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/skinlayers3d-forge-1.11.2-mc1.20.1.jar"
+hash-format = "sha256"
+hash = "2d35eff3e2642e8a6f7fb4cc7461211699ee2e32b9644e0d3b3bd6ba1574551c"

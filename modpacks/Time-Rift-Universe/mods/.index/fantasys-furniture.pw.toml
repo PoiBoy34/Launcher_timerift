@@ -1,0 +1,25 @@
+filename = 'fantasyfurniture-1.20.1-9.0.0.jar'
+name = "Fantasy's Furniture"
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'fantasyfurniture-1.20.1-9.0.0.jar'
+
+[download]
+hash = '85b51d883025413c89ce52ae5e9a7071bc4e53a3'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4702176
+project-id = 579564
+
+[[x-prismlauncher-dependencies]]
+addonId = '550778'
+type = 'EMBEDDED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '238222'
+type = 'OPTIONAL'

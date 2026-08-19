@@ -1,0 +1,8 @@
+name = "cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0"
+filename = "cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar"
+hash-format = "sha256"
+hash = "21bdce92f3fecbf6c07efd70b3ff81f8d74eb02b14030b9a405b18c7da34d5cd"

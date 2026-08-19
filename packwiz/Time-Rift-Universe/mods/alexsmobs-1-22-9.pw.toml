@@ -1,0 +1,8 @@
+name = "alexsmobs-1.22.9"
+filename = "alexsmobs-1.22.9.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/alexsmobs-1.22.9.jar"
+hash-format = "sha256"
+hash = "16bc5bcc19db9029c24f951346ec71098e6f5b0afef96e61894a2e9407aad37c"

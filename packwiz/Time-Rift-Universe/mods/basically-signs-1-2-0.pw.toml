@@ -1,0 +1,8 @@
+name = "basically_signs-1.2.0"
+filename = "basically_signs-1.2.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/PoiBoy34/Launcher_timerift/main/modpacks/Time-Rift-Universe/mods/basically_signs-1.2.0.jar"
+hash-format = "sha256"
+hash = "553e218c335fff6d0a64a2bdf4e449488ef84bb20fbcaed85493b9078d3fd174"
