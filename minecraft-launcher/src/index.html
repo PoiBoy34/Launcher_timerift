@@ -345,6 +345,7 @@
   }
   #ram-hint { font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
   #ram-hint.warn { color: var(--amber); }
+  #ram-hint.danger { color: var(--magenta); }
 
   .row-btn {
     display: flex; align-items: center; gap: 10px; width: 100%;
@@ -583,8 +584,9 @@
       playInGame: 'En jeu',
       settingsTitle: 'Paramètres',
       ramLabel: 'Mémoire allouée au jeu', ramUnit: 'Go',
-      ramHint: (used, total, max) => used + ' Go sur ' + total + ' Go détectés. Maximum conseillé : ' + max + ' Go.',
-      ramHintHigh: (max) => 'Au-delà de ' + max + ' Go il ne reste plus assez de mémoire pour ton système : le jeu planterait au démarrage.',
+      ramHint: (used, total, max) => used + ' Go sur ' + total + ' Go détectés. Conseillé jusqu’à ' + max + ' Go.',
+      ramHintDanger: 'Tu alloues toute la mémoire de ta machine. Le jeu risque de ne pas démarrer du tout.',
+      ramHintHigh: (max) => 'Au-delà de ' + max + ' Go, il reste peu de mémoire pour ton système. Si le jeu rame ou plante au démarrage, redescends.',
       ramClamped: (asked, used) => 'Mémoire ramenée de ' + asked + ' à ' + used + ' Go, ta machine ne peut pas suivre.',
       syncSectionLabel: 'Mods',
       autoSyncLabel: 'Synchronisation automatique',
@@ -640,8 +642,9 @@
       playInGame: 'In game',
       settingsTitle: 'Settings',
       ramLabel: 'Memory allocated to the game', ramUnit: 'GB',
-      ramHint: (used, total, max) => used + ' GB of ' + total + ' GB detected. Recommended maximum: ' + max + ' GB.',
-      ramHintHigh: (max) => 'Above ' + max + ' GB there is not enough memory left for your system: the game would crash on startup.',
+      ramHint: (used, total, max) => used + ' GB of ' + total + ' GB detected. Recommended up to ' + max + ' GB.',
+      ramHintDanger: 'You are allocating all your machine memory. The game may not start at all.',
+      ramHintHigh: (max) => 'Above ' + max + ' GB there is little memory left for your system. If the game stutters or crashes on startup, lower it.',
       ramClamped: (asked, used) => 'Memory reduced from ' + asked + ' to ' + used + ' GB, your machine cannot handle more.',
       syncSectionLabel: 'Mods',
       autoSyncLabel: 'Automatic sync',
@@ -874,10 +877,15 @@
   // ===========================================================================
   function renderRamHint() {
     const hint = $('ram-hint');
-    const high = ramValue >= sysInfo.maxRamGb;
-    hint.textContent = high ? L().ramHintHigh(sysInfo.maxRamGb)
-                            : L().ramHint(ramValue, sysInfo.totalRamGb, sysInfo.maxRamGb);
+    const soft = sysInfo.recommendedMaxGb || Math.max(2, Math.floor(sysInfo.totalRamGb - 2));
+    // Trois paliers : conseillé, risqué, très risqué. On avertit sans interdire.
+    const danger = ramValue >= Math.floor(sysInfo.totalRamGb);
+    const high = !danger && ramValue > soft;
+    hint.textContent = danger ? L().ramHintDanger
+                     : high   ? L().ramHintHigh(soft)
+                              : L().ramHint(ramValue, sysInfo.totalRamGb, soft);
     hint.classList.toggle('warn', high);
+    hint.classList.toggle('danger', danger);
   }
 
   function applyRam(value) {

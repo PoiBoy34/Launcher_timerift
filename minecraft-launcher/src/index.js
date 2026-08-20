@@ -134,9 +134,12 @@ function sendToWindow(channel, payload) {
 function ramLimits() {
     const totalGb = os.totalmem() / (1024 * 1024 * 1024);
     // On laisse 2 Go au système et au launcher lui-même.
-    const maxSafe = Math.max(2, Math.min(32, Math.floor(totalGb - 2)));
+    // Plafond dur : on n'autorise jamais plus que la mémoire physique, mais on
+    // laisse le joueur dépasser le seuil conseillé s'il sait ce qu'il fait.
+    const maxSafe = Math.max(2, Math.min(64, Math.floor(totalGb)));
+    const softMax = Math.max(2, Math.floor(totalGb - 2));
     const recommended = Math.max(2, Math.min(8, Math.floor(totalGb / 2)));
-    return { totalGb: Math.round(totalGb * 10) / 10, maxSafe, recommended };
+    return { totalGb: Math.round(totalGb * 10) / 10, maxSafe, softMax, recommended };
 }
 
 function clampRam(requested) {
@@ -358,6 +361,7 @@ ipcMain.handle('get-system-info', () => {
         totalRamGb: limits.totalGb,
         maxRamGb: limits.maxSafe,
         recommendedRamGb: limits.recommended,
+        recommendedMaxGb: limits.softMax,
         platform: process.platform,
         cpuCount: os.cpus().length,
         freeDiskGb: Math.round((freeSpaceGb(app.getPath('userData')) || 0) * 10) / 10

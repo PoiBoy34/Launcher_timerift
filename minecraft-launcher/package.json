@@ -1,6 +1,6 @@
 {
   "name": "timerift-launcher",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "TimeRift-Launcher — launcher du modpack Time Rift Universe",
   "author": "PoiBoy34",
   "main": "src/index.js",
